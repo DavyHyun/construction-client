@@ -1,3 +1,105 @@
 .wrapper {
-    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    > h1 {
+        margin-top: -1.5%;
+        letter-spacing: 0.07em;
+        font-family: Inter-Light;
+        font-size: 1.2vw;
+        color:white;
+        width: 50%
+    }
+
+    > p {
+        font-family: Merri-Light;
+        letter-spacing: 0.02em;
+        font-size: 1.7vw;
+        color:white;
+        width: 37%;
+        margin-top: 18%;
+    }
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-top: 27%;
+}
+
+.middleText {
+    font-family: Merri-Bold;
+    color: #14364B;
+    width: 80%;
+    font-size: 2.8vw;
+    margin-top: 5%
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+.info {
+    width: 47%;
+
+    >h1 {
+        font-family: Merri-Bold;
+        color: #14364B;
+        font-size: 2.4vw;
+        text-align: left;
+        width: 88%
+    }
+
+    >p {
+        font-family: Inter-Regular;
+        color: #14364B;
+        font-size: 1.5vw;
+        text-align: left;
+        width: 100%
+    }
+
+    > li {
+        font-family: Inter-Bold;
+        color: #14364B;
+        font-size: 1.7vw;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+}
+
+.imageContainer {
+    width: 47%;
+    height: 100%
+}
+
+.button {
+    background-color: #14364B;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20vw;
+    font-family: Inter-Light;
+    border: none;
+    height: 11.5vh;
+    align-items: center;
+    margin-top: 7%;
 }

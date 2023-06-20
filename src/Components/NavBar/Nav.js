@@ -97,7 +97,7 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Link to={`/`} style={{textDecoration: 'none', color: location.pathname === '/HOME' ? '#fff' : '#14364B', fontSize: '13.5px'}}>
+          <Link to={`/`} style={{textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#14364B', fontSize: '13.5px'}}>
             <Typography
                 variant="h6"
                 component="div"
@@ -109,7 +109,7 @@ function DrawerAppBar(props) {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', width: '95%', justifyContent: 'space-evenly', marginLeft: '5%' }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
-                <Link to={`/${item}`} style={{textDecoration: 'none', color: location.pathname === '/HOME' ? '#fff' : '#14364B', fontSize: '13.5px',  fontFamily: 'Inter-Light'}}>
+                <Link to={`/${item}`} style={{textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#14364B', fontSize: '13.5px',  fontFamily: 'Inter-Light'}}>
                     {item}
                 </Link>
               </Button>
