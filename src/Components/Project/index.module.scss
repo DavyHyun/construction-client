@@ -1,0 +1,64 @@
+.wrapper {
+    width: 42%;
+     height: 39vw;
+     background-color: rgba(0, 0, 0, 0.3);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-end;
+
+     >h1 {
+        font-family: Merri-Bold;
+        font-size: 2vw;
+        color: white;
+     }
+
+     >p {
+        font-family: Inter-Regular;
+        font-size: 1.2vw;
+        color: white;
+        margin-top: -2%;
+     }
+}
+
+.inner {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 30%;
+   background-color: rgba(20, 54, 75, 0.37);
+   align-items: center;
+
+   >h1 {
+      font-family: Merri-Light;
+      font-weight: 200;
+      letter-spacing: 0.08em;
+      font-size: 1.8vw;
+      color: white;
+      text-align: left;
+      width: 85%;
+   }
+}
+
+.line {
+   height: 1px;
+   width: 85%;
+   background-color: white;
+   color: white;
+   margin-top: -2%;
+   margin-bottom: 7%;
+}
+
+.endButton {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-align: left;
+   width: 85%;
+
+   >p {
+      font-family: Inter-Regular;
+      color: white;
+      font-size: 1.2vw;
+   }
+}
