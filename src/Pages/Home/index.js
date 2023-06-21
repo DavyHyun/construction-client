@@ -7,6 +7,8 @@ import {MdHouse} from 'react-icons/md'
 import {MdConstruction} from 'react-icons/md'
 import {MdNavigateNext}  from 'react-icons/md'
 import MiddleImage from '../../images/infoImage.jpg'
+import Demo from '../../Components/Demo/index.js'
+import Bottom from '../../Components/BottomInfo/index.js'
 
 
 const services = 'We provide services that include:';
@@ -58,9 +60,14 @@ function index() {
           </button>
         </div>
         <div className={styles.imageContainer}>
-          <img src={MiddleImage} width='350vw' height="470vh" />
+          <img src={MiddleImage} width='90%' height="100%" />
         </div>
       </div>
+      <div className={styles.demoWrapper}>
+        <Demo title='Residential Construction' text='View our projects related to residential constructions'/>
+        <Demo title='Commercial Construction' text='View our projects related to commercial constructions'/>
+      </div>
+      <Bottom />
     </div>
   )
 }
