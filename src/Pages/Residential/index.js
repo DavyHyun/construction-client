@@ -9,7 +9,7 @@ function index() {
   return (
     <div className={styles.wrapper}>
 
-      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat:"no-repeat", backgroundSize:"contain", height: '33vw', width: '100%', marginTop: 10}}> 
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", height: '13vw', width: '100%', marginTop: 10}}> 
         <h1>Residential Construction</h1>
         <div className={styles.line}></div>
         <p>Home / Residential</p>
@@ -18,7 +18,18 @@ function index() {
       <div className={styles.infoWrapper}>
         <div className={styles.eachInfo}>
           <h1>What we do</h1>
-          <p>We are a licensed general contracting company, license # JERICFL772LZ. Our license includes commercial construction and residential construction.</p>
+          <p>Bathroom Remodeling
+            <br /> Kitchen Remodeling
+            <br /> Demolition
+            <br /> Siding
+            <br /> Painting
+            <br /> Concrete Work
+            <br /> Concrete masoning
+            <br /> Concrete Finishing and Repair
+            <br /> Extension building
+            <br /> Flooring/ Hardwood
+            <br /> Tiling
+          </p>
         </div>
         <div className={styles.eachInfo}>
           <h1>The insurance claim process</h1>

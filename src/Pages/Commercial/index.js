@@ -11,8 +11,7 @@ function index() {
 
       <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat:"no-repeat", backgroundSize:"contain", height: '33vw', width: '100%', marginTop: 10}}> 
         <h1>Commercial Construction</h1>
-        <div className={styles.line}></div>
-        <p>Home / Commercial</p>
+
       </div>
 
       <div className={styles.infoWrapper}>

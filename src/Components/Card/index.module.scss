@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 37vw;
+    height: 28vw;
     width: 28vw;
     background-color: white;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
@@ -10,32 +10,32 @@
     >h1 {
         font-family: Merri-Bold;
         color: #14364B;
-        font-size: 1.4vw;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        font-size: 1.5vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     >p {
         font-family: Inter-Regular;
         width: 80%;
-        font-size: 1.3vw;
+        font-size: 1.1vw;
     }
 }
 
 .listItem {
     font-family: Inter-Regular;
-        width: 100%;
-        font-size: 1.2vw;
+    width: 100%;
+    font-size: 1.1vw;
+    list-style-type: none;
 }
 
 .line {
-    height: 2px;
-    width: 80%;
+    height: 1px;
+    width: 73%;
     background-color: #14364B;
     color: #14364B;
-    margin-bottom: 5px;
 }
 
 .spacer {
-    height: 10%
+    height: 8%
 }

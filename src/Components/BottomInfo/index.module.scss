@@ -1,7 +1,6 @@
 .wrapper {
     background-color:#FFF5EF;
     width: 100%;
-    height: 30vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -9,13 +8,16 @@
 }
 .innerWrapper {
     background-color:#FFF5EF;
-    width: 93%;
-    height: 30vw;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items:start;
-    margin-top: 10%;
 }
 
 .eachColumn {
@@ -27,7 +29,6 @@
         font-size: 1.7vw;
         color: #14364B;
         text-align: left;
-        // margin-left: 4%;
     }
 }
 

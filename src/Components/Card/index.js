@@ -9,6 +9,7 @@ function index(props) {
     <div className={styles.wrapper}>
         <div className={styles.spacer}></div>
         {icon}
+
         <h1>{title}</h1>
         <div className={styles.line}></div>
         <p>{text}</p>

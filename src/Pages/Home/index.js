@@ -2,26 +2,27 @@ import React from 'react'
 import styles from './index.module.scss'
 import background from '../../images/MainImage.jpg'
 import Card from '../../Components/Card/index.js'
-import {MdApartment} from 'react-icons/md'
-import {MdHouse} from 'react-icons/md'
-import {MdConstruction} from 'react-icons/md'
-import {MdNavigateNext}  from 'react-icons/md'
+import { MdApartment } from 'react-icons/md'
+import { MdHouse } from 'react-icons/md'
+import { MdConstruction } from 'react-icons/md'
+import { MdNavigateNext } from 'react-icons/md'
 import MiddleImage from '../../images/infoImage.jpg'
 import Demo from '../../Components/Demo/index.js'
 import Bottom from '../../Components/BottomInfo/index.js'
 
 
-const services = 'We provide services that include:';
+// const services = 'We provide services that include:';
+const services = '';
 const commercial = [
-  'Bathroom Remodeling', 
+  'Bathroom Remodeling',
   'Kitchen Remodeling',
   'Demolition',
   'Siding',
-   'Painting',
-   'Concrete Work',
+  'Painting',
+  'Concrete Work',
   'Concrete masoning',
-   'Concrete Finishing and Repair',
-    'Extension building'
+  'Concrete Finishing and Repair',
+  'Extension building'
 ];
 
 const residential = [
@@ -29,24 +30,28 @@ const residential = [
   'Kitchen Remodeling',
   'Demolition',
   'Siding',
-  'Painting'
+  'Painting',
+  'Concrete Work',
+  'Concrete masoning',
+  'Concrete Finishing and Repair',
+  'Extension building'
 ]
 
 function index() {
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat:"no-repeat", backgroundSize:"contain", height: '90vw', width: '100%', marginTop: -150}}> 
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", height: '90vw', width: '100%', marginTop: -150 }}>
         <p>JERICHO FOUNDATION LLC.</p>
         <h1>
           RESIDENTIAL AND COMMERCIAL CONSTRUCTION MANAGEMENT
         </h1>
         <div className={styles.cardWrapper}>
-          <Card icon={<MdApartment size={35} color='#14364B'/>} title={'Commercial Construction'} text={services} bulletPoints={commercial}/>
-          <Card icon={<MdHouse size={35} color='#14364B'/>} title={'Rediential Construction'} text={services} bulletPoints={residential}/>
-          <Card icon={<MdConstruction size={35} color='#14364B'/>} title={'Construction Management'} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia purus non diam viverra aliquam. Fusce auctor eget sapien quis eleifend. Mauris facilisis nibh vitae justo tincidunt viverra."} bulletPoints={[]}/>
+          <Card icon={<MdApartment size={50} color='#14364B' />} title={'Commercial Construction'} text={services} bulletPoints={commercial} />
+          <Card icon={<MdHouse size={50} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
         </div>
       </div>
-      <h1 className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</h1>
+        <text className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</text>
       <div className={styles.infoWrapper}>
         <div className={styles.info}>
           <h1>Trust in Jericho Foundation LLC for reliable results</h1>
@@ -56,7 +61,7 @@ function index() {
           <li>We always prioritize honesty and kindness in all of our interactions with our customers</li>
           <button className={styles.button}>
             VIEW OUR PROJECTS
-            <MdNavigateNext size={20} color='#fff'/>
+            <MdNavigateNext size={20} color='#fff' />
           </button>
         </div>
         <div className={styles.imageContainer}>
@@ -64,8 +69,8 @@ function index() {
         </div>
       </div>
       <div className={styles.demoWrapper}>
-        <Demo title='Residential Construction' text='View our projects related to residential constructions'/>
-        <Demo title='Commercial Construction' text='View our projects related to commercial constructions'/>
+        <Demo title='Residential Construction' text='View our projects related to residential constructions' />
+        <Demo title='Commercial Construction' text='View our projects related to commercial constructions' />
       </div>
       <Bottom />
     </div>
