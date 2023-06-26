@@ -1,13 +1,14 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 28vw;
+    height: 32vw;
     width: 28vw;
     background-color: white;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
-    padding-bottom: 2vh;
-    padding-top: 2vh;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    justify-content: center;
 
     >h1 {
         font-family: Merri-Bold;

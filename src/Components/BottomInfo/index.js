@@ -21,7 +21,7 @@ function index() {
                     <h1>Navigation</h1>
                     {navItems.map((item) => (
                         <Button key={item} sx={{ color: '#fff' }}>
-                            <Link to={`/${item}`} style={{ textDecoration: 'none', color: '#14364B', fontSize: '1.2vw', fontFamily: 'Inter-Regular', textAlign: 'left', width: '100%', marginLeft: '-8%' }}>
+                            <Link to={`/${item}`} style={{ textDecoration: 'none', color: '#14364B', fontSize: '1vw', fontFamily: 'Inter-Regular', textAlign: 'left', width: '100%', marginLeft: '-8%' }}>
                                 {item}
                             </Link>
                         </Button>
@@ -57,7 +57,7 @@ function index() {
                     </div>
                     <div className={styles.iconRow}>
                         <div>
-                            <HiMail size={'2.1vw'} color='#14364B' />
+                            <HiMail size={'2.3vw'} color='#14364B' />
                         </div>
                         <p>jericho1foundation@gmail.com</p>
                     </div>

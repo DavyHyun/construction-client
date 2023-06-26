@@ -19,6 +19,7 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
+import styles from './Nav.module.scss'
 
 
 const drawerWidth = 240;
@@ -106,17 +107,18 @@ function DrawerAppBar(props) {
                 <Typography
                   variant="h6"
                   component="div"
-                  sx={{ width: '9vw', color: '#e7d49e' }}
+                  sx={{ width: '12vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.2vw' }}
+                  fontFamily={'higuen'}
                 >
-                  Jericoh Foundation
+                  Jericoh Foundation LLC
                 </Typography>
               </Box>
             </Link>
 
             <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', width: '95%', justifyContent: 'space-evenly', marginLeft: '5%' }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }}>
-                  <Link to={`/${item}`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '0.8vw', fontFamily: 'Inter-Light' }}>
+                <Button key={item} sx={{ color: '#fff', ':hover' : { color: '#e7d49e'} }}>
+                  <Link to={`/${item}`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '0.9vw', fontFamily: 'Inter-Light' }}>
                     {item}
                   </Link>
                 </Button>

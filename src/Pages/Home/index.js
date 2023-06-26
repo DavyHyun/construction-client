@@ -61,9 +61,9 @@ function index() {
           <li>Safety is our top priority</li>
           <li>We always prioritize honesty and kindness in all of our interactions with our customers</li>
           <button className={styles.button}>
-            <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: '1.2vw', fontFamily: 'Inter-Regular',  width: '100%', }}>
-              VIEW OUR PROJECTS
-              <MdNavigateNext size={20} color='#fff' />
+            <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: '1.2vw', fontFamily: 'Inter-Regular', width: '100%', }}>
+              VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
+              {/* <MdNavigateNext size={20} color='#fff' /> */}
             </Link>
           </button>
         </div>
