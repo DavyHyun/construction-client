@@ -12,7 +12,7 @@ function index(props) {
         <p>{text}</p>
         <button className={styles.button}>
             COMING SOON
-            <MdNavigateNext size={20} color='black'/>
+            {/* <MdNavigateNext size={20} color='black'/> */}
         </button>
     </div>
   )

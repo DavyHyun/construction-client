@@ -26,12 +26,19 @@
     color: #14364B;
 }
 
+.contentWrapper {
+    flex-direction: row;
+    display: flex;
+}
+
 .infoWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     margin-top: 6%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .cardWrapper {

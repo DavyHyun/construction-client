@@ -9,6 +9,7 @@ import { MdNavigateNext } from 'react-icons/md'
 import MiddleImage from '../../images/infoImage.jpg'
 import Demo from '../../Components/Demo/index.js'
 import Bottom from '../../Components/BottomInfo/index.js'
+import { Link } from 'react-router-dom'
 
 
 // const services = 'We provide services that include:';
@@ -51,7 +52,7 @@ function index() {
           <Card icon={<MdHouse size={50} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
         </div>
       </div>
-        <text className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</text>
+      <text className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</text>
       <div className={styles.infoWrapper}>
         <div className={styles.info}>
           <h1>Trust in Jericho Foundation LLC for reliable results</h1>
@@ -60,8 +61,10 @@ function index() {
           <li>Safety is our top priority</li>
           <li>We always prioritize honesty and kindness in all of our interactions with our customers</li>
           <button className={styles.button}>
-            VIEW OUR PROJECTS
-            <MdNavigateNext size={20} color='#fff' />
+            <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: '1.2vw', fontFamily: 'Inter-Regular',  width: '100%', }}>
+              VIEW OUR PROJECTS
+              <MdNavigateNext size={20} color='#fff' />
+            </Link>
           </button>
         </div>
         <div className={styles.imageContainer}>

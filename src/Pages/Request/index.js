@@ -1,12 +1,67 @@
 import emailjs from '@emailjs/browser';
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
 import Bottom from '../../Components/BottomInfo/index.js'
 import { MdNavigateNext } from 'react-icons/md'
 
-function index() {
+function Index() {
+  emailjs.init("UbnL3pcMFsg8EyGYQ");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [telephoneNumber, setTelephoneNumber] = useState('');
+  const [serviceType, setServiceType] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleFirstNameChange = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastNameChange = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const handleEmailAddressChange = (event) => {
+    setEmailAddress(event.target.value);
+  };
+
+  const handleTelephoneNumberChange = (event) => {
+    setTelephoneNumber(event.target.value);
+  };
+
+  const handleServiceTypeChange = (event) => {
+    setServiceType(event.target.value);
+  };
+
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSubmitClicked = () => {
+    if (firstName != '' && lastName != '' && emailAddress != '' && telephoneNumber != '') {
+      emailjs.send("service_z73doeb", "template_ecqapkg", {
+        first_name: firstName,
+        last_name: lastName,
+        email_address: emailAddress,
+        telephone_number: telephoneNumber,
+        service_type: serviceType,
+        message: message,
+      });
+      alert('Thank you for your request!');
+      setFirstName('');
+      setLastName('');
+      setEmailAddress('');
+      setTelephoneNumber('');
+      setServiceType('');
+      setMessage('');
+    } else {
+      alert('Please fill out all of the *necessary fields');
+    }
+  }
+
+
   return (
     <div className={styles.wrapper}>
 
@@ -25,14 +80,18 @@ function index() {
 
       <div className={styles.inputWrapper}>
         <div className={styles.nameWrapper}>
-          <input className={styles.nameInputLeft}/>
-          <input className={styles.nameInputRight}/>
+          <input className={styles.nameInputLeft} placeholder='First Name*' onChange={handleFirstNameChange} value={firstName} />
+          <input className={styles.nameInputRight} placeholder='Last Name*' onChange={handleLastNameChange} value={lastName} />
         </div>
-        <input className={styles.normalInput}/>
-        <input className={styles.normalInput}/>
-        <input className={styles.normalInput}/>
-        <input className={styles.messageInput}/>
+        <input className={styles.normalInput} placeholder='Email Address*' onChange={handleEmailAddressChange} value={emailAddress} />
+        <input className={styles.normalInput} placeholder='Telephone Number*' onChange={handleTelephoneNumberChange} value={telephoneNumber} />
+        <input className={styles.normalInput} placeholder='Service Type' onChange={handleServiceTypeChange} value={serviceType} />
+        <input className={styles.messageInput} placeholder='Message' onChange={handleMessageChange} value={message} />
       </div>
+
+      <button onClick={handleSubmitClicked} className={styles.submitButton}>
+        SUBMIT {'>'}
+      </button>
 
       <Bottom />
 
@@ -40,4 +99,4 @@ function index() {
   )
 }
 
-export default index
+export default Index;

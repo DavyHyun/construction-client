@@ -12,8 +12,8 @@ function index(props) {
           <h1>COMING SOON</h1>
           <div className={styles.line}></div>
           <div className={styles.endButton}>
-            <p>View Now</p>
-            <MdNavigateNext size={'2.2vw'} color='white'/>
+            <p>View Soon</p>
+            {/* <MdNavigateNext size={'2.2vw'} color='white'/> */}
           </div>
         </div>
     </div>
