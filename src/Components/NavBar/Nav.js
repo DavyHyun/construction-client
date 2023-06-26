@@ -87,7 +87,7 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <HideOnScroll {...props}>
-    <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: '120px', width: '100%', boxShadow: 'none'}}>
+    <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: '120px', width: '100%', boxShadow: 'none', backgroundColor: '#396195'}}>
         <Toolbar sx={{width: '90%'}}>
           <IconButton
             color="inherit"
