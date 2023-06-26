@@ -12,7 +12,7 @@ function index() {
 
       <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: '33vw', width: '100%', marginTop: 10 }}>
         <h1>Commercial Construction</h1>
-        {/* <div className={styles.line}></div> */}
+        <div className={styles.line}></div>
         {/* <p>Home / Residential</p> */}
       </div>
 

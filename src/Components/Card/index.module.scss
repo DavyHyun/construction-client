@@ -6,13 +6,13 @@
     background-color: white;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     align-items: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
 
     >h1 {
         font-family: Merri-Bold;
         color: #14364B;
         font-size: 1.5vw;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
 
     >p {
@@ -37,5 +37,5 @@
 }
 
 .spacer {
-    height: 8%
+    // height: 8%
 }

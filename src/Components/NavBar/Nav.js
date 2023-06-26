@@ -17,7 +17,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 
 
@@ -26,29 +26,29 @@ const drawerWidth = 240;
 const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT'];
 
 function HideOnScroll(props) {
-    const { children, window } = props;
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-      target: window ? window() : undefined,
-    });
-  
-    return (
-      <Slide appear={false} direction="down" in={!trigger}>
-        {children}
-      </Slide>
-    );
-  }
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
 
-  HideOnScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-  };
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -69,9 +69,9 @@ function DrawerAppBar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-                <Link to={`/${item}`} style={{textDecoration: 'none', color: 'white'}}>
-                    {item}
-                </Link>
+              <Link to={`/${item}`} style={{ textDecoration: 'none', color: 'white' }}>
+                {item}
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -84,40 +84,46 @@ function DrawerAppBar(props) {
   console.log("PATH:" + location.pathname);
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <HideOnScroll {...props}>
-    <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: '120px', width: '100%', boxShadow: 'none', backgroundColor: '#396195'}}>
-        <Toolbar sx={{width: '90%'}}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Link to={`/`} style={{textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#14364B', fontSize: '13.5px'}}>
-            <Typography
-                variant="h6"
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' },}}
+        <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: '120px', width: '100%', boxShadow: 'none', backgroundColor: '#396195' }}>
+          <Toolbar sx={{ width: '90%' }}>
+
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { md: 'none' } }}
             >
-                Jericoh 
-            </Typography>
-          </Link>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', width: '95%', justifyContent: 'space-evenly', marginLeft: '5%' }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                <Link to={`/${item}`} style={{textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#14364B', fontSize: '13.5px',  fontFamily: 'Inter-Light'}}>
+              <MenuIcon />
+            </IconButton>
+
+            <Link to={`/`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '13.5px' }}>
+              <Box sx={{ display: 'flex', flexDirection: 'row', alignContent: 'center' , alignItems: 'center'}}>
+                <Box component="img" src={require('../../images/jericho_logo.png')} sx={{ width: '5vw', height: '7vw', }} />
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ width: '9vw', color: '#e7d49e' }}
+                >
+                  Jericoh Foundation
+                </Typography>
+              </Box>
+            </Link>
+
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', width: '95%', justifyContent: 'space-evenly', marginLeft: '5%' }}>
+              {navItems.map((item) => (
+                <Button key={item} sx={{ color: '#fff' }}>
+                  <Link to={`/${item}`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '0.8vw', fontFamily: 'Inter-Light' }}>
                     {item}
-                </Link>
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+                  </Link>
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
       </HideOnScroll>
       <Box component="nav">
         <Drawer

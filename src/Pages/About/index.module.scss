@@ -29,9 +29,33 @@
 .contentWrapper {
     flex-direction: row;
     display: flex;
-    padding-top: 5%;
+    margin-top: 3%;
     padding-bottom: 5%;
     padding-right: 10%;
+
+    .infoWrapper {
+
+        .eachInfo {
+            width: 85%;
+        
+            >h1 {
+                font-family: Merri-Regular;
+                letter-spacing: 0.02em;
+                font-size: 2vw;
+                color:#14364B;
+                text-align: left
+            }
+        
+            >p {
+                font-family: Inter-Light;
+                letter-spacing: 0.02em;
+                font-size: 1.2vw;
+                color:#14364B;
+                text-align: left
+            }
+        }   
+    }
+
 
     .images {
         width: 40%;
@@ -54,26 +78,6 @@
     justify-content: space-evenly;
     width: 90%;
 }
-
-.eachInfo {
-    width: 85%;
-
-    >h1 {
-        font-family: Merri-Regular;
-        letter-spacing: 0.02em;
-        font-size: 2vw;
-        color:#14364B;
-        text-align: left
-    }
-
-    >p {
-        font-family: Inter-Light;
-        letter-spacing: 0.02em;
-        font-size: 1.7vw;
-        color:#14364B;
-        text-align: left
-    }
-}   
 
 .projectWrapper {
     display: flex;

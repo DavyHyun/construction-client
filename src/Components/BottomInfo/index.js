@@ -6,8 +6,13 @@ import { BsFacebook, BsInstagram, BsClockFill, BsFillTelephoneFill } from 'react
 import { HiMail } from 'react-icons/hi'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 
-const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT', 'CONTACT'];
+// const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT', 'CONTACT'];
+const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT'];
 function index() {
+
+    const openFacebook = () => {
+        window.open('https://www.facebook.com/jerichofoundationllc', "_blank")
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -25,12 +30,12 @@ function index() {
                 <div className={styles.eachColumn}>
                     <h1>Follow Us</h1>
                     <div className={styles.iconContainer}>
-                        <div style={{ marginRight: '4%' }}>
+                        <div style={{ marginRight: '4%' }} onClick={openFacebook}>
                             <BsFacebook size={'2.1vw'} color='#14364B' />
                         </div>
-                        <div style={{ marginRight: '2%' }}>
+                        {/* <div style={{ marginRight: '2%' }}>
                             <BsInstagram size={'2.1vw'} color='#14364B' />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className={styles.eachColumn}>

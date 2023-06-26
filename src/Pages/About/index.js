@@ -80,7 +80,7 @@ function index() {
   return (
     <div className={styles.wrapper}>
 
-      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", height: '33vw', width: '100%', marginTop: 10 }}>
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: '33vw', width: '100%', marginTop: 10 }}>
         <h1>Our soultions are unparalleled in quality</h1>
         <div className={styles.line}></div>
       </div>
@@ -94,8 +94,8 @@ function index() {
         </div>
         <div className={styles.images}>
 
-        
-        <ImageGallery items={images} />
+
+          <ImageGallery items={images} />
         </div>
       </div>
 

@@ -1,5 +1,12 @@
+.infoWrapper {
+    margin-top: 3%;
+
+
 .eachInfo {
-    width: 100%;
+    width: 56vw;
+    line-height: 2vh;
+    padding-top: 2vh;
+
 
     >h1 {
         font-family: Merri-Bold;
@@ -12,11 +19,14 @@
 
     >p {
         font-family: Inter-Light;
-        font-size: 1.3vw;
+        font-size: 1vw;
         color: #14364B;
-        text-align: left
+        text-align: left;
     }
 }
+
+}
+
 .wrapper {
     align-items: center;
     display: flex;
@@ -58,6 +68,7 @@
     display: flex;
     width: 80%;
     height: 80vh;
+    
 
     .nameWrapper {
         width: 100%;
@@ -67,23 +78,25 @@
         height: 10%;
 
         .nameInputLeft {
-            width: 49%;
+            width: 34%;
             border-radius: 0;
             height: 100%;
             margin-bottom: 3%;
             // margin-left: -10%;
             border: 0.5px solid #14364B;
             padding-left: 10px;
+            font-size: 1.9vh;
         }
 
         .nameInputRight {
-            width: 49%;
+            width: 34%;
             border-radius: 0;
             height: 100%;
             margin-bottom: 3%;
             margin-left: 2%;
             border: 0.5px solid #14364B;
             padding-left: 10px;
+            font-size: 1.9vh;
         }
     }
 
@@ -93,6 +106,9 @@
         border-radius: 0;
         border: 0.5px solid #14364B;
         padding-left: 10px;
+        width: 70%;
+        margin-left: 15%;
+        font-size: 1.9vh;
     }
 
     .messageInput {
@@ -100,6 +116,9 @@
         border-radius: 0;
         border: 0.5px solid #14364B;
         padding-left: 10px;
+        width: 70%;
+        margin-left: 15%;
+        font-size: 1.9vh;
     }
 }
 
@@ -109,8 +128,8 @@
     background-color: transparent;
     border: 1px solid white;
     align-self: flex-end;
-    margin-right: 10%;
     font-weight: 600;
-    font-size: 1.2vw
+    font-size: 1.2vw;
+    margin-right: 22vw;
 
 }

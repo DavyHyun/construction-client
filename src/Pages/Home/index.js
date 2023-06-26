@@ -52,7 +52,7 @@ function index() {
           <Card icon={<MdHouse size={50} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
         </div>
       </div>
-      <text className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</text>
+      {/* <text className={styles.middleText}>The fusion of professionals skilled in both construction and architectural fields.</text> */}
       <div className={styles.infoWrapper}>
         <div className={styles.info}>
           <h1>Trust in Jericho Foundation LLC for reliable results</h1>

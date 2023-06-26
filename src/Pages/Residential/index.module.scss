@@ -39,31 +39,33 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 6%;
+    margin-top: 3%;
     padding-left: 10%;
     padding-right: 10%;
+
+    .eachInfo {
+        width: 40%;
+    
+    
+        >h1 {
+            font-family: Merri-Regular;
+            letter-spacing: 0.02em;
+            font-size: 2vw;
+            color: #14364B;
+            text-align: left
+        }
+    
+        >p {
+            font-family: Inter-Light;
+            letter-spacing: 0.02em;
+            font-size: 1.2vw;
+            color: #14364B;
+            text-align: left
+        }
+    }
 }
 
-.eachInfo {
-    width: 40%;
 
-
-    >h1 {
-        font-family: Merri-Regular;
-        letter-spacing: 0.02em;
-        font-size: 2vw;
-        color: #14364B;
-        text-align: left
-    }
-
-    >p {
-        font-family: Inter-Light;
-        letter-spacing: 0.02em;
-        font-size: 1.7vw;
-        color: #14364B;
-        text-align: left
-    }
-}
 
 .projectWrapper {
     display: flex;
