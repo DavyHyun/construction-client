@@ -1,0 +1,100 @@
+.eachInfo {
+    width: 100%;
+
+    >h1 {
+        font-family: Merri-Bold;
+        font-size: 2vw;
+        color: #14364B;
+        text-align: left;
+        width: 100%;
+
+    }
+
+    >p {
+        font-family: Inter-Light;
+        font-size: 1.3vw;
+        color: #14364B;
+        text-align: left
+    }
+}
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >h1 {
+        letter-spacing: 0.07em;
+        font-family: Merri-Regular;
+        font-size: 2.3vw;
+        color: #14364B;
+        width: 50%
+    }
+
+    >p {
+        font-family: Inter-Light;
+        letter-spacing: 0.02em;
+        font-size: 1.2vw;
+        color: #14364B;
+        width: 37%;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 8%;
+    background-color: #14364B;
+    color: #14364B;
+}
+
+.inputWrapper {
+    flex-direction: column;
+    display: flex;
+    width: 80%;
+    height: 80vh;
+
+    .nameWrapper {
+        width: 100%;
+        margin-bottom: 1.5%;
+        justify-content: space-between;
+        justify-content: left;
+        height: 10%;
+
+        .nameInputLeft {
+            width: 49%;
+            border-radius: 0;
+            height: 100%;
+            margin-bottom: 3%;
+            // margin-left: -10%;
+            border: 0.5px solid #14364B;
+        }
+
+        .nameInputRight {
+            width: 49%;
+            border-radius: 0;
+            height: 100%;
+            margin-bottom: 3%;
+            margin-left: 2%;
+            border: 0.5px solid #14364B;
+        }
+    }
+
+    .normalInput {
+        height: 10%;
+        margin-bottom: 1.5%;
+        border-radius: 0;
+        border: 0.5px solid #14364B;
+    }
+
+    .messageInput {
+        height: 50%;
+        border-radius: 0;
+        border: 0.5px solid #14364B;
+    }
+}
