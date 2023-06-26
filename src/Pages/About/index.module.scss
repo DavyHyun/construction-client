@@ -29,6 +29,14 @@
 .contentWrapper {
     flex-direction: row;
     display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+
+    .images {
+        width: 40%;
+        padding-top: 2%;
+    }
 }
 
 .infoWrapper {
@@ -36,7 +44,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 6%;
     padding-left: 10%;
     padding-right: 10%;
 }

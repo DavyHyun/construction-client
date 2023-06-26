@@ -92,8 +92,11 @@ function index() {
             <p>Our construction company is a General Contracting firm with 18 years of experience in Dubai, UAE, and Jordan. We have now established ourselves in Seattle, Washington State, to become a part of this beautiful community. We are grateful to be here and look forward to giving back to the community that has welcomed us with open arms. The services will be from our family to yours.</p>
           </div>
         </div>
+        <div className={styles.images}>
 
+        
         <ImageGallery items={images} />
+        </div>
       </div>
 
 
