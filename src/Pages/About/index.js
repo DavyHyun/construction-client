@@ -55,17 +55,20 @@ const hardcodedImages = [
 const About = () => {
   return (
     <div className={styles.wrapper}>
-      <PageHeader hardcodedH1={hardcodedH1}/>
+      <PageHeader hardcodedH1={hardcodedH1} />
 
       <div className={styles.contentWrapper}>
         <div className={styles.infoWrapper}>
-          <EachInfo hardcodedH1={hardcodedH2} hardcodedP1={hardcodedP1}/>
+          <div className={styles.eachInfo}>
+            <h1>{hardcodedH2}</h1>
+            <p>{hardcodedP1}</p>
+          </div>
         </div>
         <div className={styles.images}>
           <ImageGallery items={hardcodedImages} />
         </div>
       </div>
-      
+
       <BottomBar />
     </div>
   )
