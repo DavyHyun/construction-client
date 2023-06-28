@@ -138,7 +138,7 @@
         align-items: start;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 23vh;
+        height: 29vh;
         width: 100%;
         padding-left: 5vw;
 
@@ -167,14 +167,14 @@
 
         .eachInfo {
             width: 90vw;
-            line-height: 2vh;
 
             >h1 {
                 font-family: Merri-Bold;
-                font-size: 5vw;
+                font-size: 7vw;
                 color: #14364B;
                 text-align: left;
                 width: 100%;
+                line-height: 3vh;
             }
 
             >p {
