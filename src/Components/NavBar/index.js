@@ -168,7 +168,7 @@ const NavBar = (props) => {
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
+          onClose={handleDrawerToggle}x
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}

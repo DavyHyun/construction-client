@@ -40,7 +40,6 @@
 
 // export default Commercial
 
-
 import React from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
@@ -51,6 +50,18 @@ import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/scss/image-gallery.scss";
 
 const Commercial = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+
+    /* passing an empty array as the dependencies of the effect will cause this
+       effect to only run when the component mounts, and not each time it updates.
+       We only want the listener to be added once */
+  }, []);
+
   const hardcodedImages = [
     {
       original: require('../../images/gallery20.png'),
@@ -88,8 +99,17 @@ const Commercial = () => {
       thumbnail: require('../../images/gallery14_thumbnail_720x720.jpg')
     },    
   ]
+
+  const getFontSize = () => {
+    if (width > 900) {
+      return '1.2vw'
+    } else {
+      return '3.15vw'
+    }
+  }
   //https://www.youtube.com/embed/PR9WGwoL1iE
-  // https://www.youtube.com/embed/Ayl3tqxvzvA
+  //https://www.youtube.com/embed/Ayl3tqxvzvA
+
 
   return (
     <div className={styles.wrapper}>
@@ -101,8 +121,9 @@ const Commercial = () => {
 
       <div className={styles.infoWrapper}>
         <div className={styles.eachInfo}>
-          <h1>What we do</h1>
-          <p>Bathroom Remodeling
+          <div className={styles.eachInfoSub}>
+            <h1>What we do</h1>
+            <p>Bathroom Remodeling
             <br /> Kitchen Remodeling
             <br /> Demolition
             <br /> Painting
@@ -112,30 +133,24 @@ const Commercial = () => {
             <br /> Flooring/ Hardwood
             <br /> Tiling
           </p>
-          <h1>Our certification</h1>
-          <p>We are a licensed general contracting company, license # JERICFL772LZ. Our license
-            includes commercial construction and residential construction.</p>
+          </div>
+          <div className={styles.eachInfoSub}>
+            <h1>Our certification</h1>
+            <p>We are a licensed general contracting company, license # JERICFL772LZ. Our license
+              includes commercial construction and residential construction.</p>
+          </div>
         </div>
-        <div className={styles.eachInfo}>
-        <ImageGallery items={hardcodedImages}/>
+        <div className={styles.image}>
+          <ImageGallery items={hardcodedImages} />
         </div>
       </div>
-      <h1 style={{
-        fontFamily: 'Merri-Bold',
-        fontSize: '2vw',
-        color: '#14364B',
-        marginTop: '8%',
-        textAlign: 'left',
-        width: '87%',
-        marginBottom: '3%',
-        paddingLeft: '8%',
-      }}>What we've done</h1>
+      <h1>What we've done</h1>
       <div className={styles.projectWrapper}>
         <Project title='COMING SOON' />
         <Project title='COMING SOON' />
       </div>
       <button className={styles.button}>
-        <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: '1.2vw', fontFamily: 'Inter-Regular', width: '100%', }}>
+        <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
           VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
           {/* <MdNavigateNext size={20} color='#fff' /> */}
         </Link>
@@ -146,4 +161,4 @@ const Commercial = () => {
   )
 }
 
-export default Commercial
+export default Commercial;

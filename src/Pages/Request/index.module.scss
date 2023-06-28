@@ -35,9 +35,9 @@
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    background-size: cover; 
-    height: 33vw; 
-    width: 100%; 
+    background-size: cover;
+    height: 33vw;
+    width: 100%;
     margin-top: 10;
 
     >h1 {
@@ -136,6 +136,14 @@
 }
 
 @media (max-width: 480px) {
+
+    .wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: -3.1vh;
+    }
+
     .imageWrapper {
         display: flex;
         flex-direction: column;
@@ -257,6 +265,6 @@
         font-weight: 600;
         font-size: 4.2vw;
         margin-right: 8vw;
-    
+
     }
 }

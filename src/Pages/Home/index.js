@@ -105,13 +105,7 @@ const Home = () => {
         <h1>
           RESIDENTIAL AND COMMERCIAL CONSTRUCTION MANAGEMENT
         </h1>
-        {
-          width > 900 
-          ?
-          <button onClick={navToRequest}>REQUEST FREE ESTIMATE {'->'}</button>
-          :
-          null
-        }
+        <button onClick={navToRequest}>REQUEST FREE ESTIMATE {'->'}</button>
         <div className={styles.cardWrapper}>
           <Card icon={<MdApartment size={getSize()} color='#14364B' />} title={'Commercial Construction'} text={services} bulletPoints={commercial} />
           <Card icon={<MdHouse size={getSize()} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
@@ -121,11 +115,11 @@ const Home = () => {
       <div className={styles.infoWrapper}>
         {
           width > 900 ?
-          null
-          :
-          <div className={styles.imageContainer}>
-            <img src={MiddleImage} width='90%' height="100%" />
-          </div>
+            null
+            :
+            <div className={styles.imageContainer}>
+              <img src={MiddleImage} width='90%' height="100%" />
+            </div>
         }
         <div className={styles.info}>
           <h1>Trust in Jericho Foundation LLC for reliable results</h1>
@@ -142,11 +136,11 @@ const Home = () => {
         </div>
         {
           width > 900 ?
-          <div className={styles.imageContainer}>
-            <img src={MiddleImage} width='90%' height="100%" />
-          </div>
-          :
-          null
+            <div className={styles.imageContainer}>
+              <img src={MiddleImage} width='90%' height="100%" />
+            </div>
+            :
+            null
         }
       </div>
       <div className={styles.demoWrapper}>
