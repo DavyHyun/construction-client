@@ -66,6 +66,14 @@ const Home = () => {
     }
   }
 
+  const getFontSize = () => {
+    if (width > 900) {
+      return '1.2vw'
+    } else {
+      return '2.15vw'
+    }
+  }
+
   const getStyle = () => {
     if (width > 900) {
       return {
@@ -126,7 +134,7 @@ const Home = () => {
           <li>Safety is our top priority</li>
           <li>We always prioritize honesty and kindness in all of our interactions with our customers</li>
           <button className={styles.button}>
-            <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: '2.15vw', fontFamily: 'Inter-Regular', width: '100%', }}>
+            <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
               VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
               {/* <MdNavigateNext size={20} color='#fff' /> */}
             </Link>
