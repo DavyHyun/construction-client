@@ -25,7 +25,7 @@ const BottomBar = () => {
                     <h1>Navigation</h1>
                     {navItems.map((item) => (
                         <Button key={item} sx={{ color: '#fff' }}>
-                            <Link to={`/${item}`} style={{ textDecoration: 'none', color: '#14364B', fontSize: '1vw', fontFamily: 'Inter-Regular', textAlign: 'left', width: '100%', marginLeft: '-8%' }}>
+                            <Link to={`/${item}`} style={{ textDecoration: 'none', color: '#14364B', fontSize: '3vw', fontFamily: 'Inter-Regular', textAlign: 'center', width: '100%', marginLeft: '-8%' }}>
                                 {item}
                             </Link>
                         </Button>
@@ -34,11 +34,11 @@ const BottomBar = () => {
                 <div className={styles.eachColumn}>
                     <h1>Follow Us</h1>
                     <div className={styles.iconContainer}>
-                        <div style={{ marginRight: '4%' }} onClick={openFacebook}>
-                            <BsFacebook size={'2.1vw'} color='#14364B' />
+                        <div style={{ margionTop: '4%' }} onClick={openFacebook}>
+                            <BsFacebook size={'6vw'} color='#14364B' />
                         </div>
-                        <div style={{ marginRight: '4%' }} onClick={openAngis}>
-                            <img src={require('../../images/angieIcon.png')} style={{width: "2.1vw"}}/>
+                        <div style={{ }} onClick={openAngis}>
+                            <img src={require('../../images/angieIcon.png')} style={{width: "6vw"}}/>
                         </div>
                     </div>
                 </div>
@@ -46,24 +46,24 @@ const BottomBar = () => {
                     <h1>Hours</h1>
                     <div className={styles.iconRow}>
                         <div>
-                            <BsClockFill size={'2.1vw'} color='#14364B' />
+                            <BsClockFill size={'5vw'} color='#14364B' />
                         </div>
-                        <p>Sat - Fri:  6am - 12am</p>
+                        <p style={{ width: '100%' }}>Sat - Fri:  6am - 12am</p>
                     </div>
                 </div>
                 <div className={styles.eachColumn}>
                     <h1>Contact Us</h1>
                     <div className={styles.iconRow}>
                         <div>
-                            <BsFillTelephoneFill size={'2.1vw'} color='#14364B' />
+                            <BsFillTelephoneFill size={'5vw'} color='#14364B' />
                         </div>
                         <p style={{ width: '70%' }}>(708) 466-2533 (708) 955-4838</p>
                     </div>
                     <div className={styles.iconRow}>
                         <div>
-                            <HiMail size={'2.3vw'} color='#14364B' />
+                            <HiMail size={'5vw'} color='#14364B' />
                         </div>
-                        <p>jericho1foundation@gmail.com</p>
+                        <p  style={{ width: '100%' }}>jericho1foundation@gmail.com</p>
                     </div>
                     {/* <div className={styles.iconRow}>
                         <div>
