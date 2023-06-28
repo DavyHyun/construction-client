@@ -40,3 +40,45 @@
 .spacer {
     // height: 8%
 }
+
+@media (max-width: 900px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 70vw;
+        background-color: white;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        padding-bottom: 5vw;
+        padding-top: 5vw;
+        justify-content: start;
+        margin-bottom: 10%;
+    
+        >h1 {
+            font-family: Merri-Bold;
+            color: #14364B;
+            font-size: 3.5vw;
+        }
+    
+
+    }
+    
+    .listItem {
+        font-family: Inter-Regular;
+        width: 100%;
+        font-size: 2.4vw;
+        list-style-type: none;
+    }
+    
+    .line {
+        height: 1px;
+        width: 73%;
+        background-color: #14364B;
+        color: #14364B;
+    }
+    
+    .spacer {
+        // height: 8%
+    }
+}

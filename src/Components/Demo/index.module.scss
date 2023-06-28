@@ -36,3 +36,47 @@
     font-size: 1.2vw;
     margin-top: 7%;
 }
+
+@media (max-width: 900px) {
+   .wrapper {
+      width: 60%;
+       height: 70vw;
+       background-color: rgba(0, 0, 0, 0.3);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 5%;
+  
+       >h1 {
+          font-family: Merri-Bold;
+          font-size: 4vw;
+          color: white;
+          width: 80%
+       }
+  
+       >p {
+          font-family: Inter-Regular;
+          font-size: 3vw;
+          color: white;
+          margin-top: -2%;
+          width: 80%;
+       }
+  }
+  
+  .button {
+      background-color: white;
+      color: #14364B;
+      padding: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 20vw;
+      font-family: Inter-Bold;
+      border: none;
+      height: 7vw;
+      align-items: center;
+      font-size: 2vw;
+      margin-top: 7%;
+  }
+}

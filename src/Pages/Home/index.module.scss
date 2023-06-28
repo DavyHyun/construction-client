@@ -33,12 +33,13 @@
         color: white;
         border: none;
         width: 20vw;
-        height: 10vh;
+        height: 7%;
         font-size: 1.2vw;
         font-family: Inter-Light;
         border-radius: 10px;
         font-weight: 600;
         margin-top: 1vh;
+
     }
 }
 
@@ -145,5 +146,157 @@
   
 
   @media (max-width: 900px) {
+    .wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
     
+    .imageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-size: auto;
+        
+    
+        > h1 {
+            margin-top: -1.5%;
+            letter-spacing: 0.07em;
+            font-family: Inter-Light;
+            font-size: 2vw;
+            color:white;
+            width: 100%
+        }
+    
+        > p {
+            font-family: Merri-Light;
+            letter-spacing: 0.02em;
+            font-size: 3vw;
+            color:white;
+            width: 100%;
+            margin-top: 30%;
+        }
+    
+        > button {
+            background-color: #14364B;
+            color: white;
+            border: none;
+            width: 20vw;
+            height: 20%;
+            font-size: 1.2vw;
+            font-family: Inter-Light;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 1vh;
+    
+        }
+    }
+    
+    .cardWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 23%;
+    }
+    
+    .middleText {
+        font-family: Merri-Bold;
+        color: #14364B;
+        width: 80%;
+        font-size: 2.8vw;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 140%;
+    }
+    
+    .info {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+    
+        >h1 {
+            font-family: Merri-Bold;
+            color: #14364B;
+            font-size: 4vw;
+            text-align: left;
+            width: 88%
+        }
+    
+        >p {
+            font-family: Inter-Regular;
+            color: #14364B;
+            font-size: 3vw;
+            text-align: left;
+            width: 100%
+        }
+    
+        > li {
+            font-family: Inter-Bold;
+            color: #14364B;
+            font-size: 3vw;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 2vh;
+        }
+    }
+    
+    .imageContainer {
+        width: 100%;
+        height: 100%
+    }
+    
+    .button {
+        background-color: #14364B;
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        font-family: Inter-Light;
+        border: none;
+        height: 15vw;
+        align-items: center;
+        font-size: 5vw;
+        margin-top: 7%;
+    }
+    
+    .demoWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 10%;
+        margin-top: 1%;
+    }
+    
+    .vertical-fade-in-section {
+        opacity: 0;
+        transform: translateY(15vh);
+        visibility: hidden;
+        transition: opacity 2.6s ease-out, transform 2.2s ease-out;
+        will-change: opacity, visibility;
+      }
+      .vertical-fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+      }
   }
