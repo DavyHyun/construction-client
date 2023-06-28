@@ -3,41 +3,185 @@
     display: flex;
     flex-direction: column;
 
-    .contentWrapper {
-        flex-direction: row;
-        display: flex;
-        margin-top: 3%;
-        padding-bottom: 5%;
+}
+
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33vw;
+    width: 100%;
+    margin-top: 10;
+
+    >h1 {
+        letter-spacing: 0.07em;
+        font-family: Merri-Regular;
+        font-size: 2.3vw;
+        color: #14364B;
+        width: 80%
+    }
+
+    >p {
+        font-family: Inter-Light;
+        letter-spacing: 0.02em;
+        font-size: 1.2vw;
+        color: #14364B;
+        width: 37%;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 8%;
+    background-color: #14364B;
+    color: #14364B;
+}
+
+.contentWrapper {
+    flex-direction: row;
+    display: flex;
+    margin-top: 3%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+
+    .infoWrapper {
+        width: 100%;
+        padding-left: 10%;
         padding-right: 10%;
 
+        .eachInfo {
+
+            >h1 {
+                font-family: Merri-Regular;
+                letter-spacing: 0.02em;
+                font-size: 2vw;
+                color: #14364B;
+                text-align: left
+            }
+
+            >p {
+                font-family: Inter-Light;
+                letter-spacing: 0.02em;
+                font-size: 1.2vw;
+                color: #14364B;
+                text-align: left
+            }
+        }
+    }
+
+    .images {
+        width: 40%;
+        padding-top: 2%;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+    }
+
+    .imageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 29vh;
+        width: 100%;
+        padding-left: 5vw;
+
+        >h1 {
+            letter-spacing: 0.07em;
+            font-family: Merri-Regular;
+            font-size: 7vw;
+            width: 90%;
+            color: #14364B;
+            text-align: start;
+        }
+
+        >p {
+            font-family: Inter-Light;
+            letter-spacing: 0.02em;
+            font-size: 3vw;
+            color: #14364B;
+            width: 80%;
+            text-align: start;
+        }
+
+        .line {
+            height: 2px;
+            width: 8%;
+            background-color: #14364B;
+            color: #14364B;
+        }
+    }
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0%;
+
         .infoWrapper {
-            width: 100%;
-            padding-left: 10%;
-            padding-right: 10%;
+            display: flex;
 
             .eachInfo {
+                width: 90vw;
 
                 >h1 {
-                    font-family: Merri-Regular;
-                    letter-spacing: 0.02em;
-                    font-size: 2vw;
+                    font-family: Merri-Bold;
+                    font-size: 7vw;
                     color: #14364B;
-                    text-align: left
+                    text-align: left;
+                    width: 100%;
+                    line-height: 5vh;
                 }
-            
+
                 >p {
                     font-family: Inter-Light;
-                    letter-spacing: 0.02em;
-                    font-size: 1.2vw;
+                    font-size: 3vw;
                     color: #14364B;
-                    text-align: left
+                    text-align: left;
                 }
             }
         }
 
         .images {
-            width: 40%;
-            padding-top: 2%;
+            // width: 50%;
+            // max-width: 100vw;
+            width: 100vw;
+            margin: 0 auto;
+
+            // display: flex;
+
+            .image-gallery {
+                width: 100vw;
+                height: auto;
+            }
+            
+            .image-gallery-slide img {
+                width: 100%;
+                height: auto;
+                max-height: 80vh;
+                object-fit: cover;
+                overflow: hidden;
+                object-position: center center;
+            }
+            
+            .fullscreen .image-gallery-slide img {
+                max-height: 100vh;
+            }
         }
+       
     }
 }

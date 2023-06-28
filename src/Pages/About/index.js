@@ -2,9 +2,8 @@ import React from 'react'
 import styles from './index.module.scss'
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/scss/image-gallery.scss";
-import PageHeader from '../../Components/PageHeader/index.js';
 import BottomBar from '../../Components/BottomBar/index.js'
-import EachInfo from '../../Components/EachInfo';
+import background from '../../images/topBackground.jpg'
 
 const hardcodedH1 = "Our soultions are unparalleled in quality";
 const hardcodedH2 = "About Us"
@@ -55,7 +54,12 @@ const hardcodedImages = [
 const About = () => {
   return (
     <div className={styles.wrapper}>
-      <PageHeader hardcodedH1={hardcodedH1} />
+      {/* <PageHeader hardcodedH1={hardcodedH1} /> */}
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})` }}>
+        <h1>{hardcodedH1}</h1>
+        <div className={styles.line}></div>
+        <p></p>
+      </div>
 
       <div className={styles.contentWrapper}>
         <div className={styles.infoWrapper}>
