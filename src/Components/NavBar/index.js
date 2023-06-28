@@ -19,7 +19,7 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
-import styles from './Nav.module.scss'
+import styles from './index.module.scss'
 
 
 const drawerWidth = 240;
@@ -51,7 +51,7 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-function DrawerAppBar(props) {
+const NavBar = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -151,7 +151,7 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
+NavBar.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -159,4 +159,4 @@ DrawerAppBar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default NavBar;

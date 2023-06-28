@@ -8,8 +8,8 @@ import { MdConstruction } from 'react-icons/md'
 import { MdNavigateNext } from 'react-icons/md'
 import MiddleImage from '../../images/infoImage.jpg'
 import Demo from '../../Components/Demo/index.js'
-import Bottom from '../../Components/BottomInfo/index.js'
 import { Link } from 'react-router-dom'
+import BottomBar from '../../Components/BottomBar'
 
 
 // const services = 'We provide services that include:';
@@ -75,7 +75,7 @@ function index() {
         <Demo title='Residential Construction' text='View our projects related to residential constructions' />
         <Demo title='Commercial Construction' text='View our projects related to commercial constructions' />
       </div>
-      <Bottom />
+      <BottomBar />
     </div>
   )
 }

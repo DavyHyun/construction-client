@@ -2,9 +2,8 @@ import React from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
-import Bottom from '../../Components/BottomInfo/index.js'
-import { MdNavigateNext } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import BottomBar from '../../Components/BottomBar'
 
 function index() {
   return (
@@ -13,7 +12,6 @@ function index() {
       <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: '33vw', width: '100%', marginTop: 10 }}>
         <h1>Residential Construction</h1>
         <div className={styles.line}></div>
-        {/* <p>Home / Residential</p> */}
       </div>
 
       <div className={styles.infoWrapper}>
@@ -58,7 +56,7 @@ function index() {
           {/* <MdNavigateNext size={20} color='#fff' /> */}
         </Link>
       </button>
-      <Bottom />
+      <BottomBar />
 
     </div>
   )

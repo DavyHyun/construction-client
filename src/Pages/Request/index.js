@@ -2,11 +2,9 @@ import emailjs from '@emailjs/browser';
 import React, { useState } from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
-import Project from '../../Components/Project/index.js'
-import Bottom from '../../Components/BottomInfo/index.js'
-import { MdNavigateNext } from 'react-icons/md'
+import BottomBar from '../../Components/BottomBar';
 
-function Index() {
+const Request = () => {
   emailjs.init("UbnL3pcMFsg8EyGYQ");
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -93,10 +91,10 @@ function Index() {
         SUBMIT {'>'}
       </button>
 
-      <Bottom />
+      <BottomBar />
 
     </div>
   )
 }
 
-export default Index;
+export default Request;

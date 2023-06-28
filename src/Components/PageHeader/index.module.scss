@@ -1,0 +1,21 @@
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >h1 {
+        letter-spacing: 0.07em;
+        font-family: Merri-Regular;
+        font-size: 2.3vw;
+        color: #14364B;
+        width: 100%
+    }
+
+    .line {
+        height: 2px;
+        width: 8%;
+        background-color: #14364B;
+        color: #14364B;
+    }
+}

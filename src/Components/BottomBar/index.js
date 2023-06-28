@@ -8,7 +8,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 // const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT', 'CONTACT'];
 const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT'];
-function index() {
+const BottomBar = () => {
 
     const openFacebook = () => {
         window.open('https://www.facebook.com/jerichofoundationllc', "_blank")
@@ -73,4 +73,4 @@ function index() {
     )
 }
 
-export default index
+export default BottomBar
