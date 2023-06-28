@@ -14,6 +14,10 @@ const BottomBar = () => {
         window.open('https://www.facebook.com/jerichofoundationllc', "_blank")
     }
 
+    const openAngis = () => {
+        window.open('https://www.angi.com/companylist/us/wa/seattle/jericho-foundation-llc-reviews-10454499.htm', "_blank");
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.innerWrapper}>
@@ -33,9 +37,9 @@ const BottomBar = () => {
                         <div style={{ marginRight: '4%' }} onClick={openFacebook}>
                             <BsFacebook size={'2.1vw'} color='#14364B' />
                         </div>
-                        {/* <div style={{ marginRight: '2%' }}>
-                            <BsInstagram size={'2.1vw'} color='#14364B' />
-                        </div> */}
+                        <div style={{ marginRight: '4%' }} onClick={openAngis}>
+                            <img src={require('../../images/angieIcon.png')} style={{width: "2.1vw"}}/>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.eachColumn}>
