@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import BottomBar from '../../Components/BottomBar';
@@ -63,7 +63,7 @@ const Request = () => {
   return (
     <div className={styles.wrapper}>
 
-      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: '33vw', width: '100%', marginTop: 10 }}>
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})` }}>
         <h1>Request an Estimate</h1>
         <div className={styles.line}></div>
         <p>Fill out this short form, and a Jericho Foundation LLC. representative will contact you to provide you a FREE estimate. If you need immediate assistance, please call (708) 466-2533</p>
