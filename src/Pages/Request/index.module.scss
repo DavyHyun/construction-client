@@ -34,6 +34,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 33vw; 
+    width: 100%; 
+    margin-top: 10;
 
     >h1 {
         letter-spacing: 0.07em;
@@ -174,7 +179,7 @@
                 color: #14364B;
                 text-align: left;
                 width: 100%;
-                line-height: 3vh;
+                line-height: 5vh;
             }
 
             >p {
