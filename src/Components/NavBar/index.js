@@ -76,23 +76,23 @@ const NavBar = (props) => {
   function convertToFirstLetterCap(word) {
     // Convert the word to lowercase
     var lowercaseWord = word.toLowerCase();
-  
+
     // Extract the first letter and capitalize it
     var firstLetter = lowercaseWord.charAt(0).toUpperCase();
-  
+
     // Extract the rest of the word
     var restOfWord = lowercaseWord.slice(1);
-  
+
     // Concatenate the first letter and the rest of the word
     var result = firstLetter + restOfWord;
-  
+
     return result;
   }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#396195', height: '100%' }}>
       <br></br>
-      <List sx={{marginLeft: '5%'}}>
+      <List sx={{ marginLeft: '5%' }}>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -114,37 +114,44 @@ const NavBar = (props) => {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar component="nav" color='transparent' sx={{ display:  'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height:  { xs: '20vw', md: '120px'}, width: '100%', boxShadow: 'none', backgroundColor: '#396195' }}>
+        <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: { xs: '20vw', md: '120px' }, width: '100%', boxShadow: 'none', backgroundColor: '#396195' }}>
           <Toolbar sx={{ width: '90%' }}>
 
             <Link to={`/`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '13.5px' }}>
-              <Box sx={{ display: 'flex', flexDirection: 'row', alignContent: 'center' , alignItems: 'center'}}>
+              <Box sx={{ display: 'flex', flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}>
 
-                {
-                  width > 900 ? 
-                  <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                <Box component="img" src={require('../../images/jericho_logo.png')} sx={{ width: '5vw', height: '7vw', }} />
-                  <Typography
-                    variant="h6"
-                    component="div"
-                    sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
-                    fontFamily={'higuen'}
-                  >
-                  Jericoh Foundation LLC
-                </Typography>
-                </div>
+                {width > 480 ?
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                    <Box component="img" src={require('../../images/jericho_logo.png')} sx={{ width: '5vw', height: '7vw', }} />
+                    <Typography
+                      variant="h6"
+                      component="div"
+                      sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
+                      fontFamily={'higuen'}
+                    >
+                      Jericoh Foundation LLC
+                    </Typography>
+                  </div>
                   :
-                  <div>
-                    <Box component="img" src={require('../../images/LogoJericho.jpg')} sx={{ width: '30vw', height: '10vw', marginTop: '2%'}} />
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: '-3vw' }}>
+                    <Box component="img" src={require('../../images/jericho_logo.png')} sx={{ width: '15vw', height: '21vw', }} />
+                    <Typography
+                      variant="h6"
+                      component="div"
+                      sx={{ width: '30vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '4vw', textAlign: 'left' }}
+                      fontFamily={'higuen'}
+                    >
+                      Jericoh Foundation LLC
+                    </Typography>
                   </div>
                 }
-                
+
               </Box>
             </Link>
 
             <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', width: '95%', justifyContent: 'space-evenly', marginLeft: '5%' }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff', ':hover' : { color: '#e7d49e'} }}>
+                <Button key={item} sx={{ color: '#fff', ':hover': { color: '#e7d49e' } }}>
                   <Link to={`/${item}`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '0.9vw', fontFamily: 'Inter-Light' }}>
                     {item}
                   </Link>
@@ -156,9 +163,9 @@ const NavBar = (props) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ marginLeft: '50%', display: { md: 'none' } }}
+              sx={{ marginLeft: '35%', display: { md: 'none' } }}
             >
-              <MenuIcon sx={{color: 'white'}}/>
+              <MenuIcon sx={{ color: 'white' }} />
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -168,7 +175,7 @@ const NavBar = (props) => {
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}x
+          onClose={handleDrawerToggle} x
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}

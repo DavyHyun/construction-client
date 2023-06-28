@@ -183,11 +183,11 @@
 
             >h1 {
                 font-family: Merri-Bold;
-                font-size: 7vw;
+                font-size: 4vw;
                 color: #14364B;
                 text-align: left;
                 width: 100%;
-                line-height: 5vh;
+                // line-height: 5vh;
             }
 
             >p {
@@ -205,36 +205,6 @@
         justify-content: center;
         width: 80%;
         height: 80vh;
-
-
-        .nameWrapper {
-            width: 100%;
-            justify-content: flex-start;
-            height: 20%;
-            flex-direction: column;
-            display: flex;
-
-            .nameInputLeft {
-                height: 49.25%;
-                margin-bottom: 1.5%;
-                border-radius: 0;
-                border: 0.5px solid #14364B;
-                padding-left: 10px;
-                width: 100%;
-                font-size: 1.9vh;
-            }
-
-            .nameInputRight {
-                height: 49.25%;
-                margin-bottom: 1.5%;
-                border-radius: 0;
-                border: 0.5px solid #14364B;
-                padding-left: 10px;
-                width: 100%;
-                font-size: 1.9vh;
-                margin-left: -0.05vw;
-            }
-        }
 
         .normalInput {
             height: 10%;
@@ -265,6 +235,7 @@
         font-weight: 600;
         font-size: 4.2vw;
         margin-right: 8vw;
+        margin-bottom: 15%;
 
     }
 }

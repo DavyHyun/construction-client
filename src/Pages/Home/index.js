@@ -70,7 +70,7 @@ const Home = () => {
     if (width > 900) {
       return '1.2vw'
     } else {
-      return '2.15vw'
+      return '3.15vw'
     }
   }
 
@@ -118,7 +118,7 @@ const Home = () => {
             null
             :
             <div className={styles.imageContainer}>
-              <img src={MiddleImage} width='90%' height="100%" />
+              <img src={MiddleImage} width='100%' height="100%" />
             </div>
         }
         <div className={styles.info}>

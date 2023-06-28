@@ -30,7 +30,7 @@
     flex-direction: column;
 
     >h1 {
-        font-family: Merri-Bold;
+        font-family: Merri-Regular;
         font-size: 2vw;
         color: #14364B;
         margin-top: 8%;
@@ -140,13 +140,14 @@
         flex-direction: column;
 
         >h1 {
-            font-family: Merri-Bold;
+            font-family: Merri-Regular;
             font-size: 4.5vw;
             color: #14364B;
             margin-top: 5%;
             text-align: left;
             width: 100%;
             margin-bottom: 3%;
+            margin-top: 10%;
         }
 
     }
@@ -195,11 +196,13 @@
         width: 100%;
         padding-left: 10%;
         padding-right: 10%;
+        
 
         .eachInfo {
             width: 100%;
             display: flex;
             flex-direction: row;
+            margin-bottom: 8%;
 
             .eachInfoSub {
                 width: 50%;
@@ -229,6 +232,7 @@
             // max-width: 100vw;
             width: 100vw;
             margin: 0 auto;
+    
 
             // display: flex;
 
@@ -279,5 +283,6 @@
         align-items: center;
         font-size: 5vw;
         margin-top: 7%;
+        margin-bottom: 15%;
     }
 }

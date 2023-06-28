@@ -11,15 +11,15 @@ const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'A
 const BottomBar = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
 
-  React.useEffect(() => {
-    /* Inside of a "useEffect" hook add an event listener that updates
-       the "width" state variable when the window size changes */
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    React.useEffect(() => {
+        /* Inside of a "useEffect" hook add an event listener that updates
+           the "width" state variable when the window size changes */
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
 
-    /* passing an empty array as the dependencies of the effect will cause this
-       effect to only run when the component mounts, and not each time it updates.
-       We only want the listener to be added once */
-  }, []);
+        /* passing an empty array as the dependencies of the effect will cause this
+           effect to only run when the component mounts, and not each time it updates.
+           We only want the listener to be added once */
+    }, []);
 
     const openFacebook = () => {
         window.open('https://www.facebook.com/jerichofoundationllc', "_blank")
@@ -31,27 +31,27 @@ const BottomBar = () => {
 
     const getIconSize = () => {
         if (width > 900) {
-          return '2.1vw'
+            return '2.1vw'
         } else {
-          return '5.5vw'
+            return '5.5vw'
         }
-      }
+    }
 
-      const getFontSize = () => {
+    const getFontSize = () => {
         if (width > 900) {
-          return '1vw'
+            return '1vw'
         } else {
-          return '3vw'
+            return '3vw'
         }
-      }
+    }
 
-      const getTextAlign = () => {
+    const getTextAlign = () => {
         if (width > 900) {
             return 'left'
-          } else {
+        } else {
             return 'center'
-          }
-      }
+        }
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -72,8 +72,8 @@ const BottomBar = () => {
                         <div style={{ margionTop: '4%' }} onClick={openFacebook}>
                             <BsFacebook size={getIconSize()} color='#14364B' />
                         </div>
-                        <div style={{marginLeft: '4%' }} onClick={openAngis}>
-                            <img src={require('../../images/angieIcon.png')} style={{width: getIconSize()}}/>
+                        <div style={{ marginLeft: '4%' }} onClick={openAngis}>
+                            <img src={require('../../images/angieIcon.png')} style={{ width: getIconSize() }} />
                         </div>
                     </div>
                 </div>
@@ -92,13 +92,21 @@ const BottomBar = () => {
                         <div>
                             <BsFillTelephoneFill size={getIconSize()} color='#14364B' />
                         </div>
-                        <p style={{ width: '70%' }}>(708) 466-2533 (708) 955-4838</p>
+                        {width > 480 ?
+
+                            <p style={{ width: '70%' }}>(708) 466-2533 (708) 955-4838</p>
+                            :
+                            <div className={styles.numberWrapper}>
+                                <p>&nbsp; (708) 466-2533</p>
+                                <p>&nbsp; (708) 955-4838</p>
+                            </div>
+                        }
                     </div>
                     <div className={styles.iconRow}>
                         <div>
                             <HiMail size={getIconSize()} color='#14364B' />
                         </div>
-                        <p  style={{ width: '100%' }}>jericho1foundation@gmail.com</p>
+                        <p style={{ width: '100%' }}>jericho1foundation@gmail.com</p>
                     </div>
                     {/* <div className={styles.iconRow}>
                         <div>
