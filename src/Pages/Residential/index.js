@@ -4,8 +4,50 @@ import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
 import { Link } from 'react-router-dom'
 import BottomBar from '../../Components/BottomBar'
+import ImageGallery from 'react-image-gallery'
+import "react-image-gallery/styles/scss/image-gallery.scss";
 
 function index() {
+  const hardcodedImages = [
+    {
+      original: require('../../images/gallery19.png'),
+      thumbnail: require('../../images/gallery19_thumbnail_720x720.jpg'),
+      renderItem: (item) => (
+        <div className="image-gallery-image">
+          {item.embedUrl && (
+            <iframe
+              width="100%"
+              height="500vh"
+              src={item.embedUrl}
+              title={item.original}
+              allowFullScreen
+            />
+          )}
+        </div>
+      ),
+      
+      embedUrl: 'https://www.youtube.com/embed/PR9WGwoL1iE',
+    },
+    {
+      original: require('../../images/gallery15.jpg'),
+      thumbnail: require('../../images/gallery15_thumbnail_720x720.jpg')
+    },
+    {
+      original: require('../../images/gallery16.jpg'),
+      thumbnail: require('../../images/gallery16_thumbnail_720x720.jpg')
+    },
+    {
+      original: require('../../images/gallery17.jpg'),
+      thumbnail: require('../../images/gallery17_thumbnail_720x720.jpg')
+    },
+    {
+      original: require('../../images/gallery18.jpg'),
+      thumbnail: require('../../images/gallery18_thumbnail_720x720.jpg')
+    },    
+  ]
+  //https://www.youtube.com/embed/PR9WGwoL1iE
+  //https://www.youtube.com/embed/Ayl3tqxvzvA
+
   return (
     <div className={styles.wrapper}>
 
@@ -28,12 +70,15 @@ function index() {
             <br /> Extension building
             <br /> Flooring/ Hardwood
             <br /> Tiling
+            <br /> Drywall Repair
+            <br /> Patios
           </p>
-        </div>
-        <div className={styles.eachInfo}>
           <h1>Our certification</h1>
           <p>We are a licensed general contracting company, license # JERICFL772LZ. Our license
             includes commercial construction and residential construction.</p>
+        </div>
+        <div className={styles.eachInfo}>
+        <ImageGallery items={hardcodedImages}/>
         </div>
       </div>
       <h1 style={{

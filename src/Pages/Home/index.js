@@ -8,7 +8,7 @@ import { MdConstruction } from 'react-icons/md'
 import { MdNavigateNext } from 'react-icons/md'
 import MiddleImage from '../../images/infoImage.jpg'
 import Demo from '../../Components/Demo/index.js'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import BottomBar from '../../Components/BottomBar'
 
 
@@ -18,12 +18,12 @@ const commercial = [
   'Bathroom Remodeling',
   'Kitchen Remodeling',
   'Demolition',
-  'Siding',
   'Painting',
   'Concrete Work',
   'Concrete masoning',
   'Concrete Finishing and Repair',
-  'Extension building'
+  ' ',
+  ' ',
 ];
 
 const residential = [
@@ -35,10 +35,17 @@ const residential = [
   'Concrete Work',
   'Concrete masoning',
   'Concrete Finishing and Repair',
-  'Extension building'
+  'Extension building',
+  'Drywall Repair',
+  'Patios'
 ]
 
-function index() {
+const Home = () => {
+  let navigate = useNavigate();
+
+  const navToRequest = () => {
+    navigate('/REQUEST AN ESTIMATE')
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -47,6 +54,7 @@ function index() {
         <h1>
           RESIDENTIAL AND COMMERCIAL CONSTRUCTION MANAGEMENT
         </h1>
+        <button onClick={navToRequest}>REQUEST FREE ESTIMATE</button>
         <div className={styles.cardWrapper}>
           <Card icon={<MdApartment size={50} color='#14364B' />} title={'Commercial Construction'} text={services} bulletPoints={commercial} />
           <Card icon={<MdHouse size={50} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
@@ -80,4 +88,4 @@ function index() {
   )
 }
 
-export default index
+export default Home

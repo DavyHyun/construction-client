@@ -107,7 +107,7 @@ const NavBar = (props) => {
                 <Typography
                   variant="h6"
                   component="div"
-                  sx={{ width: '12vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.2vw' }}
+                  sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
                   fontFamily={'higuen'}
                 >
                   Jericoh Foundation LLC

@@ -27,6 +27,19 @@
         width: 37%;
         margin-top: 18%;
     }
+
+    > button {
+        background-color: #14364B;
+        color: white;
+        border: none;
+        width: 20vw;
+        height: 10vh;
+        font-size: 1.2vw;
+        font-family: Inter-Light;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-top: 1vh;
+    }
 }
 
 .cardWrapper {
@@ -34,7 +47,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 70%;
-    margin-top: 30%;
+    margin-top: 23%;
 }
 
 .middleText {

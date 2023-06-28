@@ -11,7 +11,7 @@ const EachInfo = (props) => {
     return (
         <div className={styles.eachInfo}>
             <h1>{hardcodedH1}</h1>
-            {hardcodedP1}
+            <p>{hardcodedP1}</p>
         </div>
     )
 }

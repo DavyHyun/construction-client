@@ -53,7 +53,7 @@ const BottomBar = () => {
                         <div>
                             <BsFillTelephoneFill size={'2.1vw'} color='#14364B' />
                         </div>
-                        <p style={{ width: '70%' }}>(708) 466-2533 (206) 886-7388</p>
+                        <p style={{ width: '70%' }}>(708) 466-2533 (708) 955-4838</p>
                     </div>
                     <div className={styles.iconRow}>
                         <div>
