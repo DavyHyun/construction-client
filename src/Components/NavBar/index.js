@@ -23,6 +23,8 @@ import styles from './index.module.scss'
 
 
 const drawerWidth = 240;
+const windows = window;
+
 // const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT', 'CONTACT'];
 const navItems = ['HOME', 'RESIDENTIAL', 'COMMERCIAL', 'REQUEST AN ESTIMATE', 'ABOUT'];
 
@@ -54,6 +56,17 @@ HideOnScroll.propTypes = {
 const NavBar = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [width, setWidth] = React.useState(windows.innerWidth);
+
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    windows.addEventListener("resize", () => setWidth(windows.innerWidth));
+
+    /* passing an empty array as the dependencies of the effect will cause this
+       effect to only run when the component mounts, and not each time it updates.
+       We only want the listener to be added once */
+  }, []);
 
 
   const handleDrawerToggle = () => {
@@ -101,30 +114,31 @@ const NavBar = (props) => {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar component="nav" color='transparent' sx={{ display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height: '120px', width: '100%', boxShadow: 'none', backgroundColor: '#396195' }}>
+        <AppBar component="nav" color='transparent' sx={{ display:  'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', height:  { xs: '20vw', md: '120px'}, width: '100%', boxShadow: 'none', backgroundColor: '#396195' }}>
           <Toolbar sx={{ width: '90%' }}>
-
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { md: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
 
             <Link to={`/`} style={{ textDecoration: 'none', color: (location.pathname === '/HOME' || location.pathname === '/') ? '#fff' : '#fff', fontSize: '13.5px' }}>
               <Box sx={{ display: 'flex', flexDirection: 'row', alignContent: 'center' , alignItems: 'center'}}>
+
+                {
+                  width > 900 ? 
+                  <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <Box component="img" src={require('../../images/jericho_logo.png')} sx={{ width: '5vw', height: '7vw', }} />
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
-                  fontFamily={'higuen'}
-                >
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
+                    fontFamily={'higuen'}
+                  >
                   Jericoh Foundation LLC
                 </Typography>
+                </div>
+                  :
+                  <div>
+                    <Box component="img" src={require('../../images/LogoJericho.jpg')} sx={{ width: '30vw', height: '10vw', marginTop: '2%'}} />
+                  </div>
+                }
+                
               </Box>
             </Link>
 
@@ -137,6 +151,15 @@ const NavBar = (props) => {
                 </Button>
               ))}
             </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ marginLeft: '50%', display: { md: 'none' } }}
+            >
+              <MenuIcon sx={{color: 'white'}}/>
+            </IconButton>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
