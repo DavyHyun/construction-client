@@ -60,18 +60,31 @@ const NavBar = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  function convertToFirstLetterCap(word) {
+    // Convert the word to lowercase
+    var lowercaseWord = word.toLowerCase();
+  
+    // Extract the first letter and capitalize it
+    var firstLetter = lowercaseWord.charAt(0).toUpperCase();
+  
+    // Extract the rest of the word
+    var restOfWord = lowercaseWord.slice(1);
+  
+    // Concatenate the first letter and the rest of the word
+    var result = firstLetter + restOfWord;
+  
+    return result;
+  }
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#396195', height: '100%' }}>
+      <br></br>
+      <List sx={{marginLeft: '5%'}}>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <Link to={`/${item}`} style={{ textDecoration: 'none', color: 'white' }}>
-                {item}
+                {convertToFirstLetterCap(item)}
               </Link>
             </ListItemButton>
           </ListItem>
