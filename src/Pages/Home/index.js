@@ -54,7 +54,7 @@ const Home = () => {
         <h1>
           RESIDENTIAL AND COMMERCIAL CONSTRUCTION MANAGEMENT
         </h1>
-        <button onClick={navToRequest}>REQUEST FREE ESTIMATE</button>
+        <button onClick={navToRequest}>REQUEST FREE ESTIMATE {'->'}</button>
         <div className={styles.cardWrapper}>
           <Card icon={<MdApartment size={50} color='#14364B' />} title={'Commercial Construction'} text={services} bulletPoints={commercial} />
           <Card icon={<MdHouse size={50} color='#14364B' />} title={'Residential Construction'} text={services} bulletPoints={residential} />
