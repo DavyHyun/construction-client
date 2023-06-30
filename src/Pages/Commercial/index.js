@@ -80,7 +80,7 @@ const Commercial = () => {
         </div>
       ),
       
-      embedUrl: 'https://www.youtube.com/embed/Ayl3tqxvzvA',
+      embedUrl: 'https://www.youtube.com/embed/hW6iV3_RfeQ',
     },
     {
       original: require('../../images/gallery11.jpg'),
@@ -107,9 +107,6 @@ const Commercial = () => {
       return '3.15vw'
     }
   }
-  //https://www.youtube.com/embed/PR9WGwoL1iE
-  //https://www.youtube.com/embed/Ayl3tqxvzvA
-
 
   return (
     <div className={styles.wrapper}>

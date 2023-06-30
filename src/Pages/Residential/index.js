@@ -38,7 +38,7 @@ const Residential = () => {
         </div>
       ),
 
-      embedUrl: 'https://www.youtube.com/embed/PR9WGwoL1iE',
+      embedUrl: 'https://www.youtube.com/embed/RdjEAdHXGR4',
     },
     {
       original: require('../../images/gallery15.jpg'),
