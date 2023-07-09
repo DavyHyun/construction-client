@@ -129,7 +129,7 @@ const NavBar = (props) => {
                       sx={{ width: '14vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '1.4vw' }}
                       fontFamily={'higuen'}
                     >
-                      Jericoh Foundation LLC
+                      Jericho Foundation LLC
                     </Typography>
                   </div>
                   :
@@ -141,7 +141,7 @@ const NavBar = (props) => {
                       sx={{ width: '30vw', color: '#e7d49e', marginLeft: '-1vw', fontSize: '4vw', textAlign: 'left' }}
                       fontFamily={'higuen'}
                     >
-                      Jericoh Foundation LLC
+                      Jericho Foundation LLC
                     </Typography>
                   </div>
                 }
