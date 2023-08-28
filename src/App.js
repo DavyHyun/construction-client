@@ -7,6 +7,7 @@ import About from './Pages/About/index';
 import Commercial from './Pages/Commercial/index';
 import Request from './Pages/Request/index';
 import Residential from './Pages/Residential/index';
+import Project from './Pages/ProjectPage/index';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/COMMERCIAL' element={<Commercial />}/>
         <Route path='/REQUEST AN ESTIMATE' element={<Request />}/>
         <Route path='/RESIDENTIAL' element={<Residential />}/>
+        <Route path='/RESIDENTIAL/:projectId' element={<Project />}/>
       </Routes>
     </div>
   );

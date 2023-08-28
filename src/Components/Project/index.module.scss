@@ -19,6 +19,10 @@
       color: white;
    }
 
+   >img {
+      object-fit: contain;
+   }
+
    .inner {
       display: flex;
       flex-direction: column;

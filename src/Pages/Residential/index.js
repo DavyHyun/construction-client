@@ -2,13 +2,55 @@ import React from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
+
 import { Link } from 'react-router-dom'
 import BottomBar from '../../Components/BottomBar'
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/scss/image-gallery.scss";
 
+const projects = [
+  {
+    id:1,
+    location: 'Burien, Seattle WA',
+    type: 'House',
+    year: '2023',
+    category: 'Residential',
+    description: 'Fire place renovation',
+    photos: [
+      {
+        original: require('../../images/Residential1_1x.jpg'),
+        thumbnail: require('../../images/Residential1_1x.jpg'),
+      },
+      {
+        original: require('../../images/Residential1_2x.jpg'),
+        thumbnail: require('../../images/Residential1_2x.jpg'),
+      },
+    ],
+  },
+  // {
+  //   id:2,
+  //   location: '',
+  //   type: '',
+  //   year: '',
+  //   category: '',
+  //   description: '',
+  //   photos: [
+  //     {
+  //       original: require(),
+  //       thumbnail: require(),
+  //     },
+  //     {
+  //       original: require(),
+  //       thumbnail: require(),
+  //     },
+  //   ],
+  // },
+
+]
+
 const Residential = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
+
 
   React.useEffect(() => {
     /* Inside of a "useEffect" hook add an event listener that updates
@@ -108,8 +150,8 @@ const Residential = () => {
       </div>
       <h1>What we've done</h1>
       <div className={styles.projectWrapper}>
-        <Project title='COMING SOON' />
-        <Project title='COMING SOON' />
+        <Project title={projects[0].location} img={projects[0].photos[0].original} project={projects[0]}/>
+        <Project title='COMING SOON' img={null}/>
       </div>
       <button className={styles.button}>
         <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
