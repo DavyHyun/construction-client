@@ -144,7 +144,7 @@ const Home = () => {
         }
       </div>
       <div className={styles.demoWrapper}>
-        <Demo title='Residential Construction' text='View our projects related to residential constructions' />
+        <Demo title='Residential Construction' text='View our projects related to residential constructions' img={require('../../images/Residential1_1x.jpg')}/>
         <Demo title='Commercial Construction' text='View our projects related to commercial constructions' />
       </div>
       <BottomBar />

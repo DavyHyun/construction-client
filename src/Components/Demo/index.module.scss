@@ -11,6 +11,10 @@
         font-family: Merri-Bold;
         font-size: 2vw;
         color: white;
+
+        :hover {
+         cursor: pointer;
+        }
      }
 
      >p {
@@ -18,6 +22,9 @@
         font-size: 1.2vw;
         color: white;
         margin-top: -2%;
+        :hover {
+         cursor: pointer;
+        }
      }
 }
 
@@ -35,6 +42,9 @@
     align-items: center;
     font-size: 1.2vw;
     margin-top: 7%;
+    :hover {
+      cursor: pointer;
+    }
 }
 
 @media (max-width: 900px) {
