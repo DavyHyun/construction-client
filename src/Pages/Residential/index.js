@@ -99,6 +99,22 @@ const Residential = () => {
       original: require('../../images/gallery18.jpg'),
       thumbnail: require('../../images/gallery18_thumbnail_720x720.jpg')
     },
+    {
+      original: require('../../images/gallery22.jpg'),
+      thumbnail: require('../../images/gallery22.jpg')
+    },
+    {
+      original: require('../../images/gallery23.jpg'),
+      thumbnail: require('../../images/gallery23.jpg')
+    },
+    {
+      original: require('../../images/gallery24.jpg'),
+      thumbnail: require('../../images/gallery24.jpg')
+    },
+    {
+      original: require('../../images/gallery25.jpg'),
+      thumbnail: require('../../images/gallery25.jpg')
+    },
   ]
 
   const getFontSize = () => {
