@@ -29,7 +29,7 @@ const Project = (props) => {
           {
             img != null ?
             <div onClick={navToProject} style={{display:'flex', flexDirection:'row', justifyContent: 'center', alignItems: 'center', cursor: 'pointer'}}>
-              <p style={{color: 'white'}}>View Project</p>
+              <p style={{color: 'white', fontSize: '3.5vw'}} >View Project</p>
               <MdNavigateNext size={'2.2vh'} color='white'/> 
             </div>
             :

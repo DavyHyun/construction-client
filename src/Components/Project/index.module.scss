@@ -110,7 +110,7 @@
         font-family: Merri-Light;
         font-weight: 600;
         letter-spacing: 0.08em;
-        font-size: 4.8vw;
+        font-size: 4.2vw;
         color: white;
         text-align: left;
         width: 85%;
@@ -134,11 +134,12 @@
         width: 85%;
         margin-top: 4%;
 
-        >p {
-          font-family: Inter-Regular;
-          color: white;
-          font-size: 0vw;
-        }
+        
+      }
+      .viewProj {
+        font-family: Inter-Regular;
+        color: white;
+        font-size: 1.2vw;
       }
     }
   }
