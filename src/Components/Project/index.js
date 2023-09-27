@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './index.module.scss'
 import { MdNavigateNext } from 'react-icons/md'
 import {useNavigate } from 'react-router-dom'
@@ -8,7 +8,30 @@ const Project = (props) => {
 
   const { title, img, project } = props;
   let navigate = useNavigate();
+  const [fontSize, setFontSize] = useState('1.2vw');
+  const [width, setWidth] = React.useState(window.innerWidth);
+  
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    getFontSize();
+    window.scrollTo(0, 0);
 
+
+    /* passing an empty array as the dependencies of the effect will cause this
+       effect to only run when the component mounts, and not each time it updates.
+       We only want the listener to be added once */
+  }, [width]);
+
+
+  const getFontSize = () => {
+    if (width > 500) {
+      setFontSize('1.2vw');
+    } else {
+      setFontSize('3.4vw');
+    }
+  }
   const navToProject = () => {
     navigate(`/RESIDENTIAL/${project.id}`, { state: {project: project}})
   }
@@ -29,7 +52,7 @@ const Project = (props) => {
           {
             img != null ?
             <div onClick={navToProject} style={{display:'flex', flexDirection:'row', justifyContent: 'center', alignItems: 'center', cursor: 'pointer'}}>
-              <p style={{color: 'white', fontSize: '3.5vw'}} >View Project</p>
+              <p style={{color: 'white', fontSize: `${fontSize}`}} >View Project</p>
               <MdNavigateNext size={'2.2vh'} color='white'/> 
             </div>
             :
