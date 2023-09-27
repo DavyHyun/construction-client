@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
@@ -16,6 +16,9 @@ const ProjectPage = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const location = useLocation();
   const receivedData = location.state.project;
+  const [fontSize, setFontSize] = useState('1.2vw');
+  const [fontSizeLocation, setFontSizeLocation] = useState('2vw');
+  const [fontSizeDesc, setFontSizeDesc] = useState('1vw');
 
 
 
@@ -23,64 +26,67 @@ const ProjectPage = () => {
     /* Inside of a "useEffect" hook add an event listener that updates
        the "width" state variable when the window size changes */
     window.addEventListener("resize", () => setWidth(window.innerWidth));
-      window.scrollTo(0, 0);
-  
+    getFontSize();
+    window.scrollTo(0, 0);
+
 
     /* passing an empty array as the dependencies of the effect will cause this
        effect to only run when the component mounts, and not each time it updates.
        We only want the listener to be added once */
-  }, []);
+  }, [width]);
 
 
   const getFontSize = () => {
-    if (width > 900) {
-      return '1.2vw'
+    if (width > 500) {
+      setFontSize('1.2vw');
+      setFontSizeDesc('1vw');
+      setFontSizeLocation('2vw');
     } else {
-      return '3.15vw'
+      setFontSize('3.4vw');
+      setFontSizeDesc('3.5vw');
+      setFontSizeLocation('5vw');
     }
   }
-  //https://www.youtube.com/embed/PR9WGwoL1iE
-  //https://www.youtube.com/embed/Ayl3tqxvzvA
 
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", height: '33vw', width: '100%', marginTop: 10 }}>
+      <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", height: '33vw', width: '110vw', marginTop: 10, marginLeft: 15 }}>
         <h1>Residential Construction</h1>
         <div className={styles.line}></div>
-        <h2 style={{fontSize: '1.4vw', color: '#14364B', fontFamily: 'Inter-Light', marginTop: '1.5%'}}>{receivedData.location}</h2>
+        <h2 style={{ fontSize: `${fontSize}`, color: '#14364B', fontFamily: 'Inter-Light', marginTop: '1.5%' }}>{receivedData.location}</h2>
       </div>
       <div className={styles.main}>
 
         <div className={styles.projectInfo}>
-            <ImageGallery items={receivedData.photos} additionalClass={styles.image} />
-            <div className={styles.infoText}>
-              <h1 style={{fontFamily:'Inter-Regular', fontSize: '2vw'}}>{receivedData.location}</h1>
-              <h2 style={{fontFamily: 'Inter-Light', fontSize: '1vw' }}>{receivedData.description}</h2>
+          <ImageGallery items={receivedData.photos} additionalClass={styles.image} />
+          <div className={styles.infoText}>
+            <h1 style={{ fontFamily: 'Inter-Regular', fontSize: `${fontSizeLocation}` }}>{receivedData.location}</h1>
+            <h2 style={{ fontFamily: 'Inter-Light', fontSize: `${fontSizeDesc}` }}>{receivedData.description}</h2>
+          </div>
+
+          <div className={styles.infoCategory}>
+
+            <div className={styles.category} >
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>Property Type</h1>
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>Year</h1>
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>Category</h1>
+            </div>
+            <div className={styles.categoryAns}>
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.type}</h1>
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.year}</h1>
+              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.category}</h1>
             </div>
 
-            <div className={styles.infoCategory}>
-              
-              <div className={styles.category}>
-                <h1>Property Type</h1>
-                <h1>Year</h1>
-                <h1>Category</h1>
-              </div>
-              <div className={styles.categoryAns}>
-                <h1>{receivedData.type}</h1>
-                <h1>{receivedData.year}</h1>
-                <h1>{receivedData.category}</h1>
-              </div>
-
-            </div>
+          </div>
 
         </div>
 
-        <div className={styles.more}>
+        {/* <div className={styles.more}>
           <h1>View Similar Projects</h1>
           
           <h2>More Coming Soon!</h2>
-        </div>
+        </div> */}
       </div>
 
       <BottomBar />

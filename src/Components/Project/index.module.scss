@@ -1,69 +1,71 @@
 .wrapper {
-   width: 42%;
-   height: 37vw;
-   background-color: rgba(0, 0, 0, 0.3);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: flex-end;
+  width: 42%;
+  height: 37vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 
-   >h1 {
-      font-family: Merri-Bold;
-      font-size: 2vw;
+  >h1 {
+    font-family: Merri-Bold;
+    font-size: 2vw;
+    color: white;
+  }
+
+  >p {
+    font-family: Inter-Regular;
+    font-size: 1.2vw;
+    color: white;
+  }
+
+  >img {
+    object-fit: contain;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(20, 54, 75, 0.37);
+    align-items: center;
+
+    >h1 {
+      font-family: Merri-Light;
+      font-weight: 200;
+      letter-spacing: 0.08em;
+      font-size: 1.8vw;
       color: white;
-   }
+      text-align: left;
+      width: 85%;
+    }
 
-   >p {
-      font-family: Inter-Regular;
-      font-size: 1.2vw;
+    .line {
+      height: 1px;
+      width: 85%;
+      background-color: white;
       color: white;
-   }
+      margin-bottom: 5%;
+      border-top: 1px solid white;
+    }
 
-   >img {
-      object-fit: contain;
-   }
-
-   .inner {
+    .endButton {
+      margin-top: 0%;
       display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 30%;
-      background-color: rgba(20, 54, 75, 0.37);
+      flex-direction: row;
       align-items: center;
-   
-      >h1 {
-         font-family: Merri-Light;
-         font-weight: 200;
-         letter-spacing: 0.08em;
-         font-size: 1.8vw;
-         color: white;
-         text-align: left;
-         width: 85%;
-      }
+      text-align: left;
+      width: 85%;
+      height: 10%;
 
-      .line {
-         height: 1px;
-         width: 85%;
-         background-color: white;
-         color: white;
-         margin-top: -2%;
-         margin-bottom: 7%;
+      >p {
+        font-family: Inter-Regular;
+        color: white;
+        font-size: 1.2vw;
       }
-
-      .endButton {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         text-align: left;
-         width: 85%;
-      
-         >p {
-            font-family: Inter-Regular;
-            color: white;
-            font-size: 1.2vw;
-         }
-      }
-   }
+    }
+  }
 }
 
 
@@ -74,69 +76,71 @@
 
 
 @media (max-width: 480px) {
-   .wrapper {
-      width: 100%;
-      height: 80vw;
-      background-color: rgba(0, 0, 0, 0.3);
+  .wrapper {
+    width: 100%;
+    height: 80vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+    >h1 {
+      font-family: Merri-Bold;
+      font-size: 5vw;
+      color: white;
+    }
+
+    >p {
+      font-family: Inter-Regular;
+      font-size: 5.2vw;
+      color: white;
+    }
+
+    .inner {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      height: 30%;
+      background-color: rgba(20, 54, 75, 0.37);
       align-items: center;
-      justify-content: flex-end;
-      margin-bottom: 10px;
-   
+
       >h1 {
-         font-family: Merri-Bold;
-         font-size: 5vw;
-         color: white;
+        font-family: Merri-Light;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        font-size: 4.8vw;
+        color: white;
+        text-align: left;
+        width: 85%;
+        margin-bottom: 2%;
       }
-   
-      >p {
-         font-family: Inter-Regular;
-         font-size: 5.2vw;
-         color: white;
+
+      .line {
+        height: 1px;
+        width: 85%;
+        background-color: white;
+        color: white;
+        margin-top: 0%;
+        margin-bottom: 0%;
       }
-   
-      .inner {
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         height: 30%;
-         background-color: rgba(20, 54, 75, 0.37);
-         align-items: center;
-      
-         >h1 {
-            font-family: Merri-Light;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            font-size: 4.8vw;
-            color: white;
-            text-align: left;
-            width: 85%;
-         }
-   
-         .line {
-            height: 1px;
-            width: 85%;
-            background-color: white;
-            color: white;
-            margin-top: -2%;
-            margin-bottom: 7%;
-         }
-   
-         .endButton {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            text-align: left;
-            width: 85%;
-         
-            >p {
-               font-family: Inter-Regular;
-               color: white;
-               font-size: 0vw;
-            }
-         }
+
+      .endButton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        width: 85%;
+        margin-top: 4%;
+
+        >p {
+          font-family: Inter-Regular;
+          color: white;
+          font-size: 0vw;
+        }
       }
-   }
-   
+    }
+  }
+
 }
