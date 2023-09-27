@@ -11,40 +11,97 @@ import "react-image-gallery/styles/scss/image-gallery.scss";
 const projects = [
   {
     id:1,
-    location: 'Burien, Seattle WA',
+    title: 'Fireplace Rennovations',
+    location: 'Greater Seattle WA Area',
     type: 'House',
     year: '2023',
     category: 'Residential',
-    description: 'Fire place renovation',
+    description: 'Multiple fire place renovations done around the greater Seattle area.',
     photos: [
       {
-        original: require('../../images/Residential1_1x.jpg'),
-        thumbnail: require('../../images/Residential1_1x.jpg'),
+        original: require('../../images/residential_fireplace_1.jpg'),
+        thumbnail: require('../../images/residential_fireplace_1_720x720.jpg'),
       },
       {
-        original: require('../../images/Residential1_2x.jpg'),
-        thumbnail: require('../../images/Residential1_2x.jpg'),
+        original: require('../../images/residential_fireplace_2.jpg'),
+        thumbnail: require('../../images/residential_fireplace_2_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_fireplace_3.jpg'),
+        thumbnail: require('../../images/residential_fireplace_3_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_fireplace_4.jpg'),
+        thumbnail: require('../../images/residential_fireplace_4_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_fireplace_5.jpg'),
+        thumbnail: require('../../images/residential_fireplace_5_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_fireplace_6.jpg'),
+        thumbnail: require('../../images/residential_fireplace_6_720x720.jpg'),
       },
     ],
   },
-  // {
-  //   id:2,
-  //   location: '',
-  //   type: '',
-  //   year: '',
-  //   category: '',
-  //   description: '',
-  //   photos: [
-  //     {
-  //       original: require(),
-  //       thumbnail: require(),
-  //     },
-  //     {
-  //       original: require(),
-  //       thumbnail: require(),
-  //     },
-  //   ],
-  // },
+  {
+    id: 2,
+    title: 'Bathroom Renovation',
+    location: 'Shoreline WA',
+    type: 'Residential Single Family',
+    year: '2023',
+    category: 'Residential',
+    description: 'Remodeling the bathtub bathroom to a shower box.',
+    photos: [
+      {
+        original: require('../../images/residential_bathroom_1_1.jpg'),
+        thumbnail: require('../../images/residential_bathroom_1_1_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_bathroom_1_2.jpg'),
+        thumbnail: require('../../images/residential_bathroom_1_2_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_bathroom_1_3.jpg'),
+        thumbnail: require('../../images/residential_bathroom_1_3_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_bathroom_1_4.jpg'),
+        thumbnail: require('../../images/residential_bathroom_1_4_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_bathroom_1_5.jpg'),
+        thumbnail: require('../../images/residential_bathroom_1_5_720x720.jpg'),
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Patio Renovation',
+    location: 'Shoreline WA',
+    type: 'Residential Single Family',
+    year: '2023',
+    category: 'Residential',
+    description: 'Remodeling the patio enclosure to a sunroom.',
+    photos: [
+      {
+        original: require('../../images/residential_patio_1_1.jpg'),
+        thumbnail: require('../../images/residential_patio_1_1_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_patio_1_2.jpg'),
+        thumbnail: require('../../images/residential_patio_1_2_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_patio_1_3.jpg'),
+        thumbnail: require('../../images/residential_patio_1_3_720x720.jpg'),
+      },
+      {
+        original: require('../../images/residential_patio_1_4.jpg'),
+        thumbnail: require('../../images/residential_patio_1_4_720x720.jpg'),
+      },
+    ],
+  },
 
 ]
 
@@ -103,18 +160,6 @@ const Residential = () => {
       original: require('../../images/gallery22.jpg'),
       thumbnail: require('../../images/gallery22.jpg')
     },
-    {
-      original: require('../../images/gallery23.jpg'),
-      thumbnail: require('../../images/gallery23.jpg')
-    },
-    {
-      original: require('../../images/gallery24.jpg'),
-      thumbnail: require('../../images/gallery24.jpg')
-    },
-    {
-      original: require('../../images/gallery25.jpg'),
-      thumbnail: require('../../images/gallery25.jpg')
-    },
   ]
 
   const getFontSize = () => {
@@ -167,15 +212,18 @@ const Residential = () => {
       </div>
       <h1>What we've done</h1>
       <div className={styles.projectWrapper}>
-        <Project title={projects[0].location} img={projects[0].photos[0].original} project={projects[0]}/>
-        <Project title='COMING SOON' img={null}/>
+        <Project title={projects[0].title} img={projects[0].photos[0].original} project={projects[0]}/>
+        <Project title={projects[1].title} img={projects[1].photos[4].original} project={projects[1]}/>
       </div>
-      <button className={styles.button}>
+      <div className={styles.projectWrapper}>
+        <Project title={projects[2].title} img={projects[2].photos[0].original} project={projects[2]}/>
+        {/* <Project title={projects[1].title} img={projects[1].photos[1].original} project={projects[1]}/> */}
+      </div>
+      {/* <button className={styles.button}>
         <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
           VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
-          {/* <MdNavigateNext size={20} color='#fff' /> */}
         </Link>
-      </button>
+      </button> */}
       <BottomBar />
 
     </div>
