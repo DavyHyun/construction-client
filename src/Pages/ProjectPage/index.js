@@ -75,7 +75,7 @@ const ProjectPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper} style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", height: '33vw', width: '110vw', marginTop: 10, marginLeft: 15 }}>
-        <h1>Residential Construction</h1>
+        <h1>{receivedData.category} Construction</h1>
         <div className={styles.line}></div>
         <h2 style={{ fontSize: `${fontSize}`, color: '#14364B', fontFamily: 'Inter-Light', marginTop: '1.5%' }}>{receivedData.location}</h2>
       </div>
