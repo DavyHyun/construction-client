@@ -16,6 +16,29 @@ const ProjectPage = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const location = useLocation();
   const receivedData = location.state.project;
+  let photos = receivedData.photos;
+  photos.forEach(photo => {
+    if (photo.embedUrl) {
+      // Add the renderItem function to the photo object
+      photo.renderItem = (item) => (
+        <div className="image-gallery-image">
+          {item.embedUrl && (
+            <iframe
+              width="100%"
+              height="500vh"
+              src={item.embedUrl}
+              title={item.original}
+              allowFullScreen
+            />
+          )}
+        </div>
+      );
+    }
+    return photo;
+  });
+
+  
+
   const [fontSize, setFontSize] = useState('1.2vw');
   const [fontSizeLocation, setFontSizeLocation] = useState('2vw');
   const [fontSizeDesc, setFontSizeDesc] = useState('1vw');
@@ -68,25 +91,19 @@ const ProjectPage = () => {
           <div className={styles.infoCategory}>
 
             <div className={styles.category} >
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>Property Type</h1>
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>Year</h1>
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>Category</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>Property Type</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>Year</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>Category</h1>
             </div>
             <div className={styles.categoryAns}>
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.type}</h1>
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.year}</h1>
-              <h1 style={{fontSize: `${fontSizeDesc}`}}>{receivedData.category}</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>{receivedData.type}</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>{receivedData.year}</h1>
+              <h1 style={{ fontSize: `${fontSizeDesc}` }}>{receivedData.category}</h1>
             </div>
 
           </div>
 
         </div>
-
-        {/* <div className={styles.more}>
-          <h1>View Similar Projects</h1>
-          
-          <h2>More Coming Soon!</h2>
-        </div> */}
       </div>
 
       <BottomBar />

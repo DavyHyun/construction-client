@@ -33,7 +33,7 @@ const Project = (props) => {
     }
   }
   const navToProject = () => {
-    navigate(`/RESIDENTIAL/${project.id}`, { state: {project: project}})
+    navigate(`/${project.category.toUpperCase()}/${project.id}`, { state: {project: project}})
   }
 
   return (

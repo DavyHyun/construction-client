@@ -21,6 +21,7 @@ function App() {
         <Route path='/REQUEST AN ESTIMATE' element={<Request />}/>
         <Route path='/RESIDENTIAL' element={<Residential />}/>
         <Route path='/RESIDENTIAL/:projectId' element={<Project />}/>
+        <Route path='/COMMERCIAL/:projectId' element={<Project />}/>
       </Routes>
     </div>
   );

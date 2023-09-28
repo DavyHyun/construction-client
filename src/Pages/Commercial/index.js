@@ -1,45 +1,3 @@
-// import React from 'react'
-// import styles from './index.module.scss'
-// import background from '../../images/topBackground.jpg'
-// import Project from '../../Components/Project/index.js'
-// import { Link } from 'react-router-dom'
-// import BottomBar from '../../Components/BottomBar/index.js'
-// import PageHeader from '../../Components/PageHeader'
-// import EachInfo from '../../Components/EachInfo'
-// import NavButton from '../../Components/NavButton'
-
-// const Commercial = () =>  {
-//   const hardcodedH1 = "Commercial Construction";
-//   const hardcodedH2 = "What we do";
-//   const hardcodedP1 = ["Bathroom Remodeling", "Kitchen Remodeling", "Demolition", "Siding", "Painting", "Concrete Work", "Concrete Masoning", "Concrete Finishing and Repair", "Extension Building", "Flooring/Hardwood", "Tiling"];
-//   const hardcodedH3 = "Our certification";
-//   const hardcodedP2 = "We are a licensed general contracting company, license # JERICFL772LZ. Our license includes commercial construction and residential construction.";
-//   const hardcodedH4 = "What we've done";
-//   const hardcodedProjTitle1 = "COMING SOON";
-//   const hardcodedProjTitle2 = "COMING SOON";
-//   const hardcodedNavRoute1 = "/ABOUT";
-//   const hardcodedButtonText1 = "VIEW OUR PROJECTS";
-
-//   return (
-//     <div className={styles.wrapper}>
-//       <PageHeader hardcodedH1={hardcodedH1} />
-//       <div className={styles.contentWrapper}>
-//         <EachInfo hardcodedH1={hardcodedH2} hardcodedP1={hardcodedP1} />
-//         <EachInfo hardcodedH1={hardcodedH3} hardcodedP1={hardcodedP2} />
-//       </div>
-//       <h1>{hardcodedH4}</h1>
-//       <div className={styles.contentWrapper}>
-//         <Project title={hardcodedProjTitle1} />
-//         <Project title={hardcodedProjTitle2} />
-//       </div>
-//       <NavButton route={hardcodedNavRoute1} hardcodedButtonText1={hardcodedButtonText1}/>
-//       <BottomBar />
-//     </div>
-//   )
-// }
-
-// export default Commercial
-
 import React from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
@@ -61,6 +19,43 @@ const Commercial = () => {
        effect to only run when the component mounts, and not each time it updates.
        We only want the listener to be added once */
   }, []);
+
+  const projects = [
+    {
+      id: 1,
+      title: 'Restaurant Rennovations',
+      location: 'Colombia Way, Seattle, WA',
+      type: 'Restaurant',
+      year: '2023',
+      category: 'Commercial',
+      description: 'Rennovated restaurant on Colombia Way, Seattle, WA.',
+      photos: [
+        {
+          original: require('../../images/commercial_restaurant_1_1.png'),
+          thumbnail: require('../../images/commercial_restaurant_1_1_720x720.png'),
+          embedUrl: 'https://www.youtube.com/embed/6KInYOESll0',
+        },
+        {
+          original: require('../../images/commercial_restaurant_1_2.png'),
+          thumbnail: require('../../images/commercial_restaurant_1_2_720x720.png'),          
+          embedUrl: 'https://www.youtube.com/embed/g8pTanZpVeo',
+        },
+        {
+          original: require('../../images/commercial_restaurant_1_3.png'),
+          thumbnail: require('../../images/commercial_restaurant_1_3_720x720.png'),
+          embedUrl: 'https://www.youtube.com/embed/cPcwZsIqWXo',
+        },
+        {
+          original: require('../../images/commercial_restaurant_1_4.png'),
+          thumbnail: require('../../images/commercial_restaurant_1_4_720x720.png'),
+        },
+        {
+          original: require('../../images/commercial_restaurant_1_5.png'),
+          thumbnail: require('../../images/commercial_restaurant_1_5_720x720.png'),
+        },
+      ],
+    },  
+  ]
 
   const hardcodedImages = [
     {
@@ -143,15 +138,14 @@ const Commercial = () => {
       </div>
       <h1>What we've done</h1>
       <div className={styles.projectWrapper}>
-        <Project title='COMING SOON' />
+      <Project title={projects[0].title} img={projects[0].photos[0].original} project={projects[0]}/>
         <Project title='COMING SOON' />
       </div>
-      <button className={styles.button}>
+      {/* <button className={styles.button}>
         <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
           VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
-          {/* <MdNavigateNext size={20} color='#fff' /> */}
         </Link>
-      </button>
+      </button> */}
       <BottomBar />
 
     </div>

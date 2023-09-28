@@ -217,13 +217,7 @@ const Residential = () => {
       </div>
       <div className={styles.projectWrapper}>
         <Project title={projects[2].title} img={projects[2].photos[0].original} project={projects[2]}/>
-        {/* <Project title={projects[1].title} img={projects[1].photos[1].original} project={projects[1]}/> */}
       </div>
-      {/* <button className={styles.button}>
-        <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
-          VIEW OUR PROJECTS &nbsp;<b>{'>'}</b>
-        </Link>
-      </button> */}
       <BottomBar />
 
     </div>
