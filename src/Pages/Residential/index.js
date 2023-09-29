@@ -161,14 +161,6 @@ const Residential = () => {
       thumbnail: require('../../images/gallery22.jpg')
     },
   ]
-
-  const getFontSize = () => {
-    if (width > 900) {
-      return '1.2vw'
-    } else {
-      return '3.15vw'
-    }
-  }
   //https://www.youtube.com/embed/PR9WGwoL1iE
   //https://www.youtube.com/embed/Ayl3tqxvzvA
 
