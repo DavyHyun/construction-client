@@ -28,7 +28,7 @@ const Commercial = () => {
       type: 'Restaurant',
       year: '2023',
       category: 'Commercial',
-      description: 'Rennovated restaurant on Colombia Way, Seattle, WA.',
+      description: 'Restaurant preparation from scratch, bar design, kitchen, walk in cooler, hood installation.',
       photos: [
         {
           original: require('../../images/commercial_restaurant_1_1.png'),
