@@ -102,6 +102,46 @@ const projects = [
       },
     ],
   },
+  {
+    id: 4,
+    title: 'Flooring Renovation',
+    location: 'Shoreline WA',
+    type: 'Residential Single Family',
+    year: '2023',
+    category: 'Residential',
+    description: 'Demolishing the old floor to renovate the hardwood floors.',
+    photos: [
+      {
+        original: require('../../images/residential_flooring_thumbnail.png'),
+        thumbnail: require('../../images/residential_flooring_thumbnail_720x720.png'),        
+        embedUrl: 'https://www.youtube.com/embed/KJYjFrq9x3g',
+      },
+      {
+        original: require('../../images/residential_flooring_1.jpeg'),
+        thumbnail: require('../../images/residential_flooring_1_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_2.jpeg'),
+        thumbnail: require('../../images/residential_flooring_2_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_3.jpeg'),
+        thumbnail: require('../../images/residential_flooring_3_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_4.jpeg'),
+        thumbnail: require('../../images/residential_flooring_4_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_5.jpeg'),
+        thumbnail: require('../../images/residential_flooring_5_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_6.jpeg'),
+        thumbnail: require('../../images/residential_flooring_6_720x720.jpeg'),
+      },
+    ],
+  },
 
 ]
 
@@ -209,6 +249,7 @@ const Residential = () => {
       </div>
       <div className={styles.projectWrapper}>
         <Project title={projects[2].title} img={projects[2].photos[0].original} project={projects[2]}/>
+        <Project title={projects[3].title} img={projects[3].photos[5].original} project={projects[3]}/>
       </div>
       <BottomBar />
 
