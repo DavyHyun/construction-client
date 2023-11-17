@@ -100,6 +100,34 @@ const projects = [
         original: require('../../images/residential_patio_1_4.jpg'),
         thumbnail: require('../../images/residential_patio_1_4_720x720.jpg'),
       },
+      {
+        original: require('../../images/residential_patio_1_5.webp'),
+        thumbnail: require('../../images/residential_patio_1_5_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_6.webp'),
+        thumbnail: require('../../images/residential_patio_1_6_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_7.webp'),
+        thumbnail: require('../../images/residential_patio_1_7_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_8.webp'),
+        thumbnail: require('../../images/residential_patio_1_8_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_9.webp'),
+        thumbnail: require('../../images/residential_patio_1_9_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_10.webp'),
+        thumbnail: require('../../images/residential_patio_1_10_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_patio_1_11.webp'),
+        thumbnail: require('../../images/residential_patio_1_11_720x720.webp'),
+      },
     ],
   },
   {
@@ -139,6 +167,34 @@ const projects = [
       {
         original: require('../../images/residential_flooring_6.jpeg'),
         thumbnail: require('../../images/residential_flooring_6_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_7.jpg'),
+        thumbnail: require('../../images/residential_flooring_7_720x720.jpeg'),
+      },
+      {
+        original: require('../../images/residential_flooring_8.webp'),
+        thumbnail: require('../../images/residential_flooring_8_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_flooring_9.webp'),
+        thumbnail: require('../../images/residential_flooring_9_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_flooring_10.webp'),
+        thumbnail: require('../../images/residential_flooring_10_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_flooring_11.webp'),
+        thumbnail: require('../../images/residential_flooring_11_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_flooring_12.webp'),
+        thumbnail: require('../../images/residential_flooring_12_720x720.webp'),
+      },
+      {
+        original: require('../../images/residential_flooring_13.webp'),
+        thumbnail: require('../../images/residential_flooring_13_720x720.webp'),
       },
     ],
   },

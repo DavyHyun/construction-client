@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import styles from './index.module.scss'
 import background from '../../images/topBackground.jpg'
 import Project from '../../Components/Project/index.js'
+import './index.css';
 
 import { Link } from 'react-router-dom'
 import BottomBar from '../../Components/BottomBar'
 import ImageGallery from 'react-image-gallery'
-import "react-image-gallery/styles/scss/image-gallery.scss";
+// import "react-image-gallery/styles/scss/image-gallery.scss";
 import { useLocation } from 'react-router-dom';
 
 import { ConstructionOutlined } from '@mui/icons-material'
@@ -82,7 +83,9 @@ const ProjectPage = () => {
       <div className={styles.main}>
 
         <div className={styles.projectInfo}>
-          <ImageGallery items={receivedData.photos} additionalClass={styles.image} />
+          <div className={styles.image}>
+          <ImageGallery items={receivedData.photos} />
+          </div>
           <div className={styles.infoText}>
             <h1 style={{ fontFamily: 'Inter-Regular', fontSize: `${fontSizeLocation}` }}>{receivedData.location}</h1>
             <h2 style={{ fontFamily: 'Inter-Light', fontSize: `${fontSizeDesc}` }}>{receivedData.description}</h2>

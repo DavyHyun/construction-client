@@ -1,0 +1,10 @@
+.image-gallery {
+  height: 100%;
+  width: auto;
+}
+
+.image-gallery-slide img {
+  width: auto;
+  height: 69vh;
+  min-height: 69vh;
+}
