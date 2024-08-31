@@ -55,6 +55,81 @@ const Commercial = () => {
         },
       ],
     },  
+    {
+      id: 2,
+      title: 'The Port Of Peri Peri',
+      location: '22612 Bothell Everett Hwy Bothell, WA',
+      type: 'Restaurant',
+      year: '2024 (Feb - Aug)',
+      category: 'Commercial',
+      description: 'Grand Openeing is September 2nd, 2024! Walls, floors, bathrooms, full kitchen/hood. \n Plumbing, electrical work, ceiling / countertops / bricks / paint / full renovations, inspection pass guaranteed.',
+      photos: [
+        {
+          original: require('../../images/commericalP2/FCC2D6E1-BCEE-434A-AC0F-550C48FF2BAD.jpg'),
+          thumbnail: require('../../images/commericalP2/FCC2D6E1-BCEE-434A-AC0F-550C48FF2BAD.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/06E82F23-C4E6-40C1-A934-C40E03895880.jpg'),
+          thumbnail: require('../../images/commericalP2/06E82F23-C4E6-40C1-A934-C40E03895880.jpg'),          
+        },
+        {
+          original: require('../../images/commericalP2/CFF22FC9-B5C6-434A-AE46-0423748A5317.jpg'),
+          thumbnail: require('../../images/commericalP2/CFF22FC9-B5C6-434A-AE46-0423748A5317.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/C922F5EF-9B8C-4BC9-B751-60234E4B6256.jpg'),
+          thumbnail: require('../../images/commericalP2/C922F5EF-9B8C-4BC9-B751-60234E4B6256.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/B5F8A3D4-C608-437F-98DF-825F560E53B5.jpg'),
+          thumbnail: require('../../images/commericalP2/B5F8A3D4-C608-437F-98DF-825F560E53B5.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/377359D1-3EB9-4CF8-ACDC-CC531E6F1F40.jpg'),
+          thumbnail: require('../../images/commericalP2/377359D1-3EB9-4CF8-ACDC-CC531E6F1F40.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/75510ADE-4781-46D5-9C30-6AB822CD39A1.jpg'),
+          thumbnail: require('../../images/commericalP2/75510ADE-4781-46D5-9C30-6AB822CD39A1.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/17509BB0-85C3-4F28-B264-7859E89AD95F.jpg'),
+          thumbnail: require('../../images/commericalP2/17509BB0-85C3-4F28-B264-7859E89AD95F.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/5808DA3D-9305-4E89-9A2D-CB9355CF2D0A.jpg'),
+          thumbnail: require('../../images/commericalP2/5808DA3D-9305-4E89-9A2D-CB9355CF2D0A.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/512F630D-B173-4C6E-B071-4A156461D063.jpg'),
+          thumbnail: require('../../images/commericalP2/512F630D-B173-4C6E-B071-4A156461D063.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/159E1865-4922-4D6B-B465-9D38D75B7AEA.jpg'),
+          thumbnail: require('../../images/commericalP2/159E1865-4922-4D6B-B465-9D38D75B7AEA.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/127E538F-58BA-4896-8E96-E14E84DEE582.jpg'),
+          thumbnail: require('../../images/commericalP2/127E538F-58BA-4896-8E96-E14E84DEE582.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/94CA3DC8-5E69-4DF8-B85F-133051C445C9.jpg'),
+          thumbnail: require('../../images/commericalP2/94CA3DC8-5E69-4DF8-B85F-133051C445C9.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/08D15FF6-D3C5-4056-B5B3-C660278FBB84.jpg'),
+          thumbnail: require('../../images/commericalP2/08D15FF6-D3C5-4056-B5B3-C660278FBB84.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/06E82F23-C4E6-40C1-A934-C40E03895880.jpg'),
+          thumbnail:require('../../images/commericalP2/06E82F23-C4E6-40C1-A934-C40E03895880.jpg'),
+        },
+        {
+          original: require('../../images/commericalP2/1B9C8086-5932-4D91-B608-2A1A6BEFF11B.jpg'),
+          thumbnail:require('../../images/commericalP2/1B9C8086-5932-4D91-B608-2A1A6BEFF11B.jpg'),
+        },
+      ],
+    },  
   ]
 
   const hardcodedImages = [
@@ -139,7 +214,7 @@ const Commercial = () => {
       <h1>What we've done</h1>
       <div className={styles.projectWrapper}>
       <Project title={projects[0].title} img={projects[0].photos[0].original} project={projects[0]}/>
-        <Project title='COMING SOON' />
+      <Project title={projects[1].title} img={projects[1].photos[0].original} project={projects[1]}/>
       </div>
       {/* <button className={styles.button}>
         <Link to={'/ABOUT'} style={{ textDecoration: 'none', color: 'white', fontSize: getFontSize(), fontFamily: 'Inter-Regular', width: '100%', }}>
